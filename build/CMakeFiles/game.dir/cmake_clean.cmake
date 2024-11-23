@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "/Users/ben/Repositories/VoxelEngine/res/shaders/basic/f_shader.fs.h"
   "/Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h"
   "/Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h"
+  "/Users/ben/Repositories/VoxelEngine/res/shaders/basic/voxel.cs.h"
   "CMakeFiles/game.dir/src/main.cpp.o"
   "CMakeFiles/game.dir/src/main.cpp.o.d"
   "game"

@@ -301,11 +301,11 @@ CMakeFiles/compileShaders.dir/clean:
 # Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
-CMakeFiles/game.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 CMakeFiles/game.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/game.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=54 "Built target game"
@@ -331,11 +331,11 @@ CMakeFiles/game.dir/clean:
 # Target rules for target lib/bgfx/CMakeFiles/tools.dir
 
 # All Build rule for target.
-lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/all
-lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all
 lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all
 lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/all
 lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all
+lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/all
+lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all
 lib/bgfx/CMakeFiles/tools.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/CMakeFiles/tools.dir/build.make lib/bgfx/CMakeFiles/tools.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/CMakeFiles/tools.dir/build.make lib/bgfx/CMakeFiles/tools.dir/build
@@ -492,10 +492,10 @@ lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/clean:
 # Target rules for target lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/all
+lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target texturec"
@@ -521,8 +521,8 @@ lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=1,2 "Built target bgfx"
@@ -548,11 +548,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target texturev"
@@ -604,11 +604,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target geometryv"
@@ -764,13 +764,13 @@ lib/bgfx/cmake/bgfx/CMakeFiles/fcpp.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
-lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/spirv-opt.dir/all
-lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/glslang.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/glsl-optimizer.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/fcpp.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=75,76 "Built target shaderc"
@@ -866,10 +866,10 @@ lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=49,50,51,52,53 "Built target example-common"
@@ -895,11 +895,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-00-helloworld"
@@ -925,12 +925,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=13 "Built target example-01-cubes"
@@ -956,12 +956,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-02-metaballs"
@@ -987,12 +987,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=14 "Built target example-03-raymarch"
@@ -1018,12 +1018,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-04-mesh"
@@ -1049,12 +1049,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-05-instancing"
@@ -1080,12 +1080,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=15 "Built target example-06-bump"
@@ -1111,12 +1111,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-07-callback"
@@ -1142,12 +1142,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=16 "Built target example-08-update"
@@ -1173,12 +1173,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=17,18 "Built target example-09-hdr"
@@ -1204,11 +1204,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-10-font"
@@ -1234,11 +1234,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-11-fontsdf"
@@ -1264,20 +1264,20 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-12-lod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=19 "Built target example-12-lod"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/rule
@@ -1295,20 +1295,20 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=19,20 "Built target example-13-stencil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=20 "Built target example-13-stencil"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/rule
@@ -1326,12 +1326,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=21,22 "Built target example-14-shadowvolumes"
@@ -1357,12 +1357,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=23 "Built target example-15-shadowmaps-simple"
@@ -1388,12 +1388,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=24,25,26,27,28,29 "Built target example-16-shadowmaps"
@@ -1419,12 +1419,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-17-drawstress"
@@ -1450,12 +1450,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=30 "Built target example-18-ibl"
@@ -1481,12 +1481,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=31 "Built target example-19-oit"
@@ -1512,11 +1512,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-20-nanovg"
@@ -1542,11 +1542,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-22-windows"
@@ -1572,12 +1572,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=32 "Built target example-23-vectordisplay"
@@ -1603,12 +1603,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=33 "Built target example-24-nbody"
@@ -1634,11 +1634,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-25-c99"
@@ -1664,11 +1664,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-26-occlusion"
@@ -1694,12 +1694,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=34 "Built target example-27-terrain"
@@ -1725,12 +1725,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-28-wireframe"
@@ -1756,11 +1756,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-29-debugdraw"
@@ -1786,12 +1786,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=35 "Built target example-30-picking"
@@ -1817,12 +1817,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=36 "Built target example-31-rsm"
@@ -1848,11 +1848,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-32-particles"
@@ -1878,20 +1878,20 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-33-pom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=37 "Built target example-33-pom"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/rule
@@ -1909,19 +1909,19 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=37 "Built target example-34-mvs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-34-mvs"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/rule
@@ -1939,11 +1939,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-35-dynamic"
@@ -1969,12 +1969,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=38 "Built target example-36-sky"
@@ -2000,12 +2000,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=39 "Built target example-38-bloom"
@@ -2031,12 +2031,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=40,41 "Built target example-39-assao"
@@ -2062,12 +2062,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=42 "Built target example-40-svt"
@@ -2093,12 +2093,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-42-bunnylod"
@@ -2124,12 +2124,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=43,44 "Built target example-43-denoise"
@@ -2155,12 +2155,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-44-sss"
@@ -2186,12 +2186,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=45,46 "Built target example-45-bokeh"
@@ -2217,12 +2217,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=47 "Built target example-46-fsr"
@@ -2248,11 +2248,11 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/clean:
 # Target rules for target lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir
 
 # All Build rule for target.
-lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
+lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=48 "Built target example-47-pixelformats"

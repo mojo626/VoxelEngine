@@ -17,6 +17,8 @@ void glfw_keyCallback(GLFWwindow *window, int key, int scancode, int action, int
 {
     if (key == GLFW_KEY_F1 && action == GLFW_RELEASE)
         s_showStats = !s_showStats;
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
+        glfwSetWindowShouldClose(window, 1);
 }
 
 class Window {

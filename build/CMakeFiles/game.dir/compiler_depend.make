@@ -1448,6 +1448,7 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/f_shader.fs.h \
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h \
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h \
+  /Users/ben/Repositories/VoxelEngine/res/shaders/basic/voxel.cs.h \
   /Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp
 
 
@@ -3004,6 +3005,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/is_transparent.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/errno.h:
+
+/Users/ben/Repositories/VoxelEngine/res/shaders/basic/voxel.cs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Endian.h:
 

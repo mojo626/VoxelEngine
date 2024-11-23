@@ -10,6 +10,7 @@
 #include "../res/shaders/basic/f_shader.fs.h"
 #include "../res/shaders/basic/v_shader.vs.h"
 #include "../res/shaders/basic/gol.cs.h"
+#include "../res/shaders/basic/voxel.cs.h"
 
 #include "ComputeManager.hpp"
 
@@ -62,13 +63,27 @@ int main() {
     
     bgfx::ProgramHandle program = bgfx::createProgram(vsh, fsh, true);
 
+    bgfx::UniformHandle camUniform = bgfx::createUniform("camData", bgfx::UniformType::Vec4, 2);
+
     compute.init();
+
 
 
     while (!glfwWindowShouldClose(window.getWindow())) {
 
 
         window.startRendering();
+
+        float camData[2][4];
+        camData[0][0] = 0.0;
+        camData[0][1] = 0.0;
+        camData[0][2] = 0.0;
+
+        camData[1][0] = 1.0;
+        camData[1][1] = 0.0;
+        camData[1][2] = 0.0;
+
+        bgfx::setUniform(camUniform, camData, 2);
         
         compute.dispatch();
 
