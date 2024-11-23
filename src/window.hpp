@@ -2,27 +2,20 @@
 #define WINDOW_H
 
 #include <iostream>
+#include <map>
 
 #include "common.h"
 
 
 static bool s_showStats = false;
 
-void glfw_errorCallback(int error, const char *description)
-{
-    fprintf(stderr, "GLFW error %d: %s\n", error, description);
-}
 
-void glfw_keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_F1 && action == GLFW_RELEASE)
-        s_showStats = !s_showStats;
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
-        glfwSetWindowShouldClose(window, 1);
-}
 
 class Window {
     public:
+        std::map<int, bool> keyboard;
+        GLFWwindow* window;
+
         Window(int windowWidth2, int windowHeight2)
         {
             windowWidth = windowWidth2;
@@ -38,6 +31,8 @@ class Window {
             window = glfwCreateWindow(windowWidth, windowHeight, "helloworld", nullptr, nullptr);
             if (!window)
                 return false;
+
+            glfwSetWindowUserPointer(window, this);
 
             glfwSetKeyCallback(window, glfw_keyCallback);
 
@@ -128,8 +123,27 @@ class Window {
     private:
         int windowWidth;
         int windowHeight;
-        GLFWwindow* window;
         bgfx::ViewId kClearView;
+
+        static void glfw_errorCallback(int error, const char *description)
+        {
+            fprintf(stderr, "GLFW error %d: %s\n", error, description);
+        }
+
+        static void glfw_keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+        {
+            Window* win = static_cast<Window*>(glfwGetWindowUserPointer(window));
+            if (key == GLFW_KEY_F1 && action == GLFW_RELEASE)
+                s_showStats = !s_showStats;
+            if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
+                glfwSetWindowShouldClose(window, 1);
+
+            if (action == GLFW_PRESS)
+                win->keyboard[key] = true;
+            else if (action == GLFW_RELEASE)
+                win->keyboard[key] = false;
+        }
+        
 
 };
 

@@ -39,7 +39,7 @@ static const uint16_t s_quadIndices[] = { 0, 1, 2, 2, 3, 0, };
 
 int main() {
 
-    ComputeManager compute(512, 512);
+    ComputeManager compute(128, 128);
     
     Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT);
 
@@ -64,24 +64,47 @@ int main() {
     bgfx::ProgramHandle program = bgfx::createProgram(vsh, fsh, true);
 
     bgfx::UniformHandle camUniform = bgfx::createUniform("camData", bgfx::UniformType::Vec4, 2);
+    bgfx::UniformHandle sizeUniform = bgfx::createUniform("outputSize", bgfx::UniformType::Vec4, 1);
 
     compute.init();
 
+    float camData[2][4];
+    camData[0][0] = 0.0;
+    camData[0][1] = 0.0;
+    camData[0][2] = 0.0;
 
+    camData[1][0] = 1.0;
+    camData[1][1] = 0.0;
+    camData[1][2] = 0.0;
+
+    float sizeData[4];
+    sizeData[0] = 128;
+    sizeData[1] = 128;
+
+    bgfx::setUniform(sizeUniform, sizeData, 1);
 
     while (!glfwWindowShouldClose(window.getWindow())) {
 
 
         window.startRendering();
 
-        float camData[2][4];
-        camData[0][0] = 0.0;
-        camData[0][1] = 0.0;
-        camData[0][2] = 0.0;
-
-        camData[1][0] = 1.0;
-        camData[1][1] = 0.0;
-        camData[1][2] = 0.0;
+        if (window.keyboard[GLFW_KEY_A])
+        {
+            camData[0][0] -= 0.1;
+        }
+        if (window.keyboard[GLFW_KEY_D])
+        {
+            camData[0][0] += 0.1;
+        }
+        if (window.keyboard[GLFW_KEY_W])
+        {
+            camData[0][2] += 0.1;
+        }
+        if (window.keyboard[GLFW_KEY_S])
+        {
+            camData[0][2] -= 0.1;
+        }
+        
 
         bgfx::setUniform(camUniform, camData, 2);
         
