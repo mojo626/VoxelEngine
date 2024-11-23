@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = -DBGFX_CONFIG_DEBUG_ANNOTATION=0 -DBGFX_CONFIG_MULTITHREADED=1 -DBX_CONFIG_DEBUG=0 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
-CXX_INCLUDES = -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx/include -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/3rdparty -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/compat/osx -I/Users/ben/Repositories/VoxelEngine/lib/glfw/include
+CXX_INCLUDES = -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/3rdparty -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/compat/osx -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx/include -I/Users/ben/Repositories/VoxelEngine/lib/bgfx/bimg/include -I/Users/ben/Repositories/VoxelEngine/lib/glfw/include
 
 CXX_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -std=gnu++17
 

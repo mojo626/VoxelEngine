@@ -5,7 +5,6 @@
 
 #include "common.h"
 
-#include "color.hpp"
 
 static bool s_showStats = false;
 
@@ -51,8 +50,10 @@ class Window {
                 init.platformData.nwh = (void*)(uintptr_t)glfwGetX11Window(window);
             #elif BX_PLATFORM_OSX
                 init.platformData.nwh = glfwGetCocoaWindow(window);
+                init.type = bgfx::RendererType::Metal;
             #elif BX_PLATFORM_WINDOWS
                 init.platformData.nwh = glfwGetWin32Window(window);
+                init.type = bgfx::RendererType::Direct3D11;
             #endif
 
             int width, height;
@@ -62,6 +63,15 @@ class Window {
             init.resolution.reset = BGFX_RESET_VSYNC;
             if (!bgfx::init(init))
                 return false;
+
+            const bgfx::Caps* caps = bgfx::getCaps();
+            bool m_computeSupported  = !!(caps->supported & BGFX_CAPS_COMPUTE);
+
+            if (!m_computeSupported)
+            {
+                std::cout << "Compute shaders are not supported..." << std::endl;
+                return false;
+            }
 
             kClearView = 0;
             bgfx::setViewClear(kClearView, BGFX_CLEAR_COLOR);
@@ -98,6 +108,11 @@ class Window {
 
             // This dummy draw call is here to make sure that view 0 is cleared if no other draw calls are submitted to view 0.
             bgfx::touch(kClearView);
+            // Use debug font to print information about this example.
+            bgfx::dbgTextClear();
+
+            bgfx::dbgTextPrintf(0, 0, 0x0f, "Press F1 to view stats");
+            bgfx::setDebug(s_showStats ? BGFX_DEBUG_STATS : BGFX_DEBUG_TEXT);
         }
 
    

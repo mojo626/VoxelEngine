@@ -131,6 +131,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/compileShaders.dir/DependInfo.cmake"
   "CMakeFiles/game.dir/DependInfo.cmake"
   "lib/bgfx/CMakeFiles/tools.dir/DependInfo.cmake"
   "lib/bgfx/cmake/bx/CMakeFiles/bx.dir/DependInfo.cmake"

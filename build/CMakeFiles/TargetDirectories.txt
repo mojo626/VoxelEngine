@@ -1,3 +1,4 @@
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/compileShaders.dir
 /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/game.dir
 /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/edit_cache.dir
 /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/rebuild_cache.dir

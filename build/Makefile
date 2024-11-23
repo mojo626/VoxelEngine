@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named compileShaders
+
+# Build rule for target.
+compileShaders: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compileShaders
+.PHONY : compileShaders
+
+# fast build rule for target.
+compileShaders/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compileShaders.dir/build.make CMakeFiles/compileShaders.dir/build
+.PHONY : compileShaders/fast
+
+#=============================================================================
 # Target rules for targets named game
 
 # Build rule for target.
@@ -1081,6 +1094,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... compileShaders"
 	@echo "... examples"
 	@echo "... tools"
 	@echo "... uninstall"

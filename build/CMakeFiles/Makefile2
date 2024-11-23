@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /Users/ben/Repositories/VoxelEngine/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/compileShaders.dir/all
 all: CMakeFiles/game.dir/all
 all: lib/bgfx/all
 all: lib/glfw/all
@@ -74,6 +75,7 @@ preinstall: lib/glfw/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/compileShaders.dir/clean
 clean: CMakeFiles/game.dir/clean
 clean: lib/bgfx/clean
 clean: lib/glfw/clean
@@ -270,12 +272,39 @@ lib/glfw/src/clean: lib/glfw/src/CMakeFiles/update_mappings.dir/clean
 .PHONY : lib/glfw/src/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/compileShaders.dir
+
+# All Build rule for target.
+CMakeFiles/compileShaders.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compileShaders.dir/build.make CMakeFiles/compileShaders.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compileShaders.dir/build.make CMakeFiles/compileShaders.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target compileShaders"
+.PHONY : CMakeFiles/compileShaders.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/compileShaders.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 46
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/compileShaders.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
+.PHONY : CMakeFiles/compileShaders.dir/rule
+
+# Convenience name for target.
+compileShaders: CMakeFiles/compileShaders.dir/rule
+.PHONY : compileShaders
+
+# clean rule for target.
+CMakeFiles/compileShaders.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compileShaders.dir/build.make CMakeFiles/compileShaders.dir/clean
+.PHONY : CMakeFiles/compileShaders.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 CMakeFiles/game.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
+CMakeFiles/game.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 CMakeFiles/game.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
@@ -284,7 +313,7 @@ CMakeFiles/game.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/game.dir/rule
@@ -336,12 +365,12 @@ lib/bgfx/CMakeFiles/tools.dir/clean:
 lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bx.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bx.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bx.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=11,12 "Built target bx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=10,11,12 "Built target bx"
 .PHONY : lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bx/CMakeFiles/bx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bx/CMakeFiles/bx.dir/rule
@@ -362,7 +391,7 @@ lib/bgfx/cmake/bx/CMakeFiles/bx.dir/clean:
 lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=10 "Built target bin2c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target bin2c"
 .PHONY : lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/all
 
 # Build rule for subdir invocation for target.
@@ -393,7 +422,7 @@ lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/rule
@@ -419,7 +448,7 @@ lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all: lib/bgfx/cmake/bx/CMakeFiles
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/rule
@@ -445,7 +474,7 @@ lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/all: lib/bgfx/cmake/bx/CMakeFiles
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/rule
@@ -474,7 +503,7 @@ lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/rule
@@ -501,7 +530,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all: lib/bgfx/cmake/bimg/CMakeFiles/bimg
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/rule
@@ -531,7 +560,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/rule
@@ -552,12 +581,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/clean:
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/all: lib/bgfx/cmake/bx/CMakeFiles/bx.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=55 "Built target geometryc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=55,56 "Built target geometryc"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/rule
@@ -582,7 +611,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles
 lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=56 "Built target geometryv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target geometryv"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -634,12 +663,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/spirv-opt.dir/clean:
 lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=76,77 "Built target spirv-cross"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=77 "Built target spirv-cross"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/rule
@@ -744,12 +773,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/g
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/fcpp.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=75 "Built target shaderc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=75,76 "Built target shaderc"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/rule
@@ -819,7 +848,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 89
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 90
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/rule
@@ -848,7 +877,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/rule
@@ -878,7 +907,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all: lib/bgfx/cmake/bgf
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/rule
@@ -904,12 +933,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bgfx/CMa
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-01-cubes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=13 "Built target example-01-cubes"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/rule
@@ -935,7 +964,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bgfx
 lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=13 "Built target example-02-metaballs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-02-metaballs"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -966,12 +995,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bgfx/
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-03-raymarch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=14 "Built target example-03-raymarch"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/rule
@@ -997,7 +1026,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bgfx/CMak
 lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=14 "Built target example-04-mesh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-04-mesh"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1033,7 +1062,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all: lib/bgfx/cmake/bgf
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/rule
@@ -1064,7 +1093,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all: lib/bgfx/cmake/bgfx/CMak
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/rule
@@ -1095,7 +1124,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all: lib/bgfx/cmake/bgfx/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/rule
@@ -1126,7 +1155,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all: lib/bgfx/cmake/bgfx/CM
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/rule
@@ -1152,12 +1181,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bgfx/CMake
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=17 "Built target example-09-hdr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=17,18 "Built target example-09-hdr"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/rule
@@ -1182,7 +1211,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bgfx/CMak
 lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=18 "Built target example-10-font"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-10-font"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1217,7 +1246,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/rule
@@ -1248,7 +1277,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/rule
@@ -1279,7 +1308,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/rule
@@ -1310,7 +1339,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all: lib/bgfx/cmake/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/rule
@@ -1341,7 +1370,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all: lib/bgfx/cm
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/rule
@@ -1372,7 +1401,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all: lib/bgfx/cmake/bgf
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 59
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 60
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/rule
@@ -1403,7 +1432,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all: lib/bgfx/cmake/bgf
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/rule
@@ -1434,7 +1463,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/rule
@@ -1465,7 +1494,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/rule
@@ -1495,7 +1524,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all: lib/bgfx/cmake/bgfx/CM
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/rule
@@ -1525,7 +1554,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/rule
@@ -1556,7 +1585,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all: lib/bgfx/cmake/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/rule
@@ -1582,12 +1611,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bgfx/CMa
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-24-nbody"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=33 "Built target example-24-nbody"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/rule
@@ -1612,7 +1641,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bgfx/CMake
 lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=33 "Built target example-25-c99"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-25-c99"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1647,7 +1676,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all: lib/bgfx/cmake/bgfx
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/rule
@@ -1673,12 +1702,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bgfx/C
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-27-terrain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=34 "Built target example-27-terrain"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/rule
@@ -1704,7 +1733,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bgfx
 lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=34 "Built target example-28-wireframe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-28-wireframe"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1739,7 +1768,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all: lib/bgfx/cmake/bgfx
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/rule
@@ -1770,7 +1799,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/rule
@@ -1801,7 +1830,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/rule
@@ -1831,7 +1860,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all: lib/bgfx/cmake/bgfx
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/rule
@@ -1862,7 +1891,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/rule
@@ -1892,7 +1921,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/rule
@@ -1922,7 +1951,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/rule
@@ -1953,7 +1982,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/rule
@@ -1979,12 +2008,12 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bgfx/CMa
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num= "Built target example-38-bloom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=39 "Built target example-38-bloom"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/rule
@@ -2010,7 +2039,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bgfx/CMa
 lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all: lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=39,40,41 "Built target example-39-assao"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=40,41 "Built target example-39-assao"
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2046,7 +2075,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/rule
@@ -2077,7 +2106,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all: lib/bgfx/cmake/bgfx/
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/rule
@@ -2108,7 +2137,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all: lib/bgfx/cmake/bgfx/C
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/rule
@@ -2139,7 +2168,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/rule
@@ -2170,7 +2199,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all: lib/bgfx/cmake/bgfx/CMa
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/rule
@@ -2201,7 +2230,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all: lib/bgfx/cmake/bgfx/CMake
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/rule
@@ -2231,7 +2260,7 @@ lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all: lib/bgfx/cmake/b
 
 # Build rule for subdir invocation for target.
 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles 0
 .PHONY : lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/rule

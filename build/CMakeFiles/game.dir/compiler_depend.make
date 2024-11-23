@@ -879,7 +879,6 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/ben/Repositories/VoxelEngine/src/color.hpp \
   /Users/ben/Repositories/VoxelEngine/src/common.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/bx.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/platform.h \
@@ -1445,8 +1444,16 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers/SpeechSynthesis.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc-api.h \
-  /Users/ben/Repositories/VoxelEngine/src/window.hpp
+  /Users/ben/Repositories/VoxelEngine/src/window.hpp \
+  /Users/ben/Repositories/VoxelEngine/res/shaders/basic/f_shader.fs.h \
+  /Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h \
+  /Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h \
+  /Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp
 
+
+/Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h:
+
+/Users/ben/Repositories/VoxelEngine/res/shaders/basic/f_shader.fs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc.h:
 
@@ -2126,8 +2133,6 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 
 /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/config.h:
 
-/Users/ben/Repositories/VoxelEngine/src/color.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/NumberFormatting.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h:
@@ -2203,6 +2208,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg:
+
+/Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_types/_nl_item.h:
 
@@ -3837,6 +3844,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_caddr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/appleapiopts.h:
+
+/Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__concepts/equality_comparable.h:
 

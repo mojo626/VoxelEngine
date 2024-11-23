@@ -877,7 +877,6 @@ CMakeFiles/game.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/ben/Repositories/VoxelEngine/src/color.hpp \
   /Users/ben/Repositories/VoxelEngine/src/common.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/bx.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/platform.h \
@@ -1443,4 +1442,8 @@ CMakeFiles/game.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers/SpeechSynthesis.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc-api.h \
-  /Users/ben/Repositories/VoxelEngine/src/window.hpp
+  /Users/ben/Repositories/VoxelEngine/src/window.hpp \
+  /Users/ben/Repositories/VoxelEngine/src/../res/shaders/basic/f_shader.fs.h \
+  /Users/ben/Repositories/VoxelEngine/src/../res/shaders/basic/v_shader.vs.h \
+  /Users/ben/Repositories/VoxelEngine/src/../res/shaders/basic/gol.cs.h \
+  /Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp

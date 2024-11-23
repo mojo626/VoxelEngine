@@ -251,5 +251,9 @@ d242c09cecd74e899c4a7f3304839cb8 /Users/ben/Repositories/VoxelEngine/lib/bgfx/bg
 d8f6c89a05d44546f20423f7d6c31bf4 /Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx/examples/runtime/shaders/metal/vs_vt_generic.bin
 6b90db60a394f49f94fb2d8b9db729f2 /Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx/examples/runtime/shaders/metal/vs_wf_mesh.bin
 ca9be7e23202cde4d9d7473adfbb69f4 /Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx/examples/runtime/shaders/metal/vs_wf_wireframe.bin
+c39239d4facfa645cfa8736d5ead711c /Users/ben/Repositories/VoxelEngine/res/shaders/basic/f_shader.fs.h
+488ce3959e70f4e34da49be0672c9599 /Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h
+df209ca6e41a387412047bdd9a5255e9 /Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h
+51d7d2b5df987c66cc477c0997210f76 CMakeFiles/compileShaders
 10a73a676979d599e6b2d98b49907c2c lib/glfw/CMakeFiles/uninstall
 5871c1b54329657aa39659c64d3e9567 lib/glfw/src/CMakeFiles/update_mappings
