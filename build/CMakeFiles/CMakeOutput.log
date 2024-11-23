@@ -5819,3 +5819,54 @@ gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFile
 
 Source file was:
 int main(void) { return 0; }
+Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_0c79c/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_0c79c.dir/build.make CMakeFiles/cmTC_0c79c.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0c79c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -Dflag_supported  -ObjC++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fPIE   -Wno-implicit-fallthrough -std=c++17 -MD -MT CMakeFiles/cmTC_0c79c.dir/src.cxx.o -MF CMakeFiles/cmTC_0c79c.dir/src.cxx.o.d -o CMakeFiles/cmTC_0c79c.dir/src.cxx.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0c79c
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c79c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++ -ObjC++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0c79c.dir/src.cxx.o -o cmTC_0c79c 
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_db4c6/fast && gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+/opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_db4c6.dir/build.make CMakeFiles/cmTC_db4c6.dir/build
+gmake[2]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db4c6.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_db4c6.dir/src.c.o -MF CMakeFiles/cmTC_db4c6.dir/src.c.o.d -o CMakeFiles/cmTC_db4c6.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_db4c6
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db4c6.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_db4c6.dir/src.c.o -o cmTC_db4c6 
+gmake[2]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

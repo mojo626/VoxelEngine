@@ -14,6 +14,120 @@
 # EXTERNAL cache entries
 ########################
 
+//Amalgamated bgfx build for faster compilation
+BGFX_AMALGAMATED:BOOL=OFF
+
+//Build bgfx examples.
+BGFX_BUILD_EXAMPLES:BOOL=ON
+
+//Build bgfx tests.
+BGFX_BUILD_TESTS:BOOL=OFF
+
+//Build bgfx tools.
+BGFX_BUILD_TOOLS:BOOL=ON
+
+//Build bx binary to c converter.
+BGFX_BUILD_TOOLS_BIN2C:BOOL=ON
+
+//Build bgfx geometry tools.
+BGFX_BUILD_TOOLS_GEOMETRY:BOOL=ON
+
+//Build bgfx shader tools.
+BGFX_BUILD_TOOLS_SHADER:BOOL=ON
+
+//Build bgfx texture tools.
+BGFX_BUILD_TOOLS_TEXTURE:BOOL=ON
+
+//Path to custom cmake script to include
+BGFX_CMAKE_USER_SCRIPT:STRING=
+
+//Enable gfx debug annotations (default: on in debug)
+BGFX_CONFIG_DEBUG_ANNOTATION:BOOL=OFF
+
+//Specify default maximum encoder count (multithreaded only)
+BGFX_CONFIG_DEFAULT_MAX_ENCODERS:STRING=
+
+//Specify maximum draw calls
+BGFX_CONFIG_MAX_DRAW_CALLS:STRING=
+
+//Specify maximum dynamic index buffer count
+BGFX_CONFIG_MAX_DYNAMIC_INDEX_BUFFERS:STRING=
+
+//Specify maximum dynamic vertex buffer count
+BGFX_CONFIG_MAX_DYNAMIC_VERTEX_BUFFERS:STRING=
+
+//Specify maximum frame buffers
+BGFX_CONFIG_MAX_FRAME_BUFFERS:STRING=
+
+//Specify maximum index buffer count
+BGFX_CONFIG_MAX_INDEX_BUFFERS:STRING=
+
+//Specify shader count
+BGFX_CONFIG_MAX_SHADERS:STRING=
+
+//Specify maximum texture count
+BGFX_CONFIG_MAX_TEXTURES:STRING=
+
+//Specify maximum texture samplers
+BGFX_CONFIG_MAX_TEXTURE_SAMPLERS:STRING=
+
+//Specify maximum vertex buffer count
+BGFX_CONFIG_MAX_VERTEX_BUFFERS:STRING=
+
+//Specify maximum vertex layouts
+BGFX_CONFIG_MAX_VERTEX_LAYOUTS:STRING=
+
+//Specify maximum view count (should be a power of two)
+BGFX_CONFIG_MAX_VIEWS:STRING=
+
+//Build bgfx with multithreaded configuration
+BGFX_CONFIG_MULTITHREADED:BOOL=ON
+
+//Enable the webgpu renderer
+BGFX_CONFIG_RENDERER_WEBGPU:BOOL=OFF
+
+//Specify maximum program count as 2^(program bits)
+BGFX_CONFIG_SORT_KEY_NUM_BITS_PROGRAM:STRING=
+
+//Include convenience custom targets.
+BGFX_CUSTOM_TARGETS:BOOL=ON
+
+//Location of bgfx.
+BGFX_DIR:STRING=/Users/ben/Repositories/VoxelEngine/lib/bgfx/bgfx
+
+//Create installation target.
+BGFX_INSTALL:BOOL=ON
+
+//Install examples and their runtimes.
+BGFX_INSTALL_EXAMPLES:BOOL=OFF
+
+//Linking type for library
+BGFX_LIBRARY_TYPE:STRING=STATIC
+
+//Specify minimum OpenGL ES version
+BGFX_OPENGLES_VERSION:STRING=
+
+//Specify minimum opengl version
+BGFX_OPENGL_VERSION:STRING=
+
+//Prefix name to add to name of tools (to avoid clashes)
+BGFX_TOOLS_PREFIX:STRING=
+
+//Location of bimg.
+BIMG_DIR:STRING=/Users/ben/Repositories/VoxelEngine/lib/bgfx/bimg
+
+//Build shared libraries
+BUILD_SHARED_LIBS:BOOL=OFF
+
+//Amalgamated bx build for faster compilation
+BX_AMALGAMATED:BOOL=OFF
+
+//Log debug messages (default: on in debug)
+BX_CONFIG_DEBUG:BOOL=OFF
+
+//Location of bx.
+BX_DIR:STRING=/Users/ben/Repositories/VoxelEngine/lib/bgfx/bx
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -293,16 +407,59 @@ CMAKE_STRIP:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a library.
+COCOA_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Cocoa.framework
+
+//Path to a library.
+COREFOUNDATION_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreFoundation.framework
+
+//Path to a library.
 COREHAPTICS:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreHaptics.framework
 
 //Path to a library.
 COREMEDIA:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreMedia.framework
+
+//Doxygen documentation generation tool (http://www.doxygen.org)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
+//Path to a library.
+FOUNDATION_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Foundation.framework
 
 //Path to a library.
 GAMECONTROLLER:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/GameController.framework
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/opt/homebrew/bin/git
+
+//Value Computed by CMake
+GLFW_BINARY_DIR:STATIC=/Users/ben/Repositories/VoxelEngine/build/lib/glfw
+
+//Build support for Cocoa
+GLFW_BUILD_COCOA:BOOL=ON
+
+//Build the GLFW documentation
+GLFW_BUILD_DOCS:BOOL=ON
+
+//Build the GLFW example programs
+GLFW_BUILD_EXAMPLES:BOOL=OFF
+
+//Build the GLFW test programs
+GLFW_BUILD_TESTS:BOOL=OFF
+
+//Generate installation target
+GLFW_INSTALL:BOOL=ON
+
+//Value Computed by CMake
+GLFW_IS_TOP_LEVEL:STATIC=OFF
+
+//Library type override for GLFW (SHARED, STATIC, OBJECT, or empty
+// to follow BUILD_SHARED_LIBS)
+GLFW_LIBRARY_TYPE:STRING=
+
+//Value Computed by CMake
+GLFW_SOURCE_DIR:STATIC=/Users/ben/Repositories/VoxelEngine/lib/glfw
+
+//Path to a library.
+IOKIT_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/IOKit.framework
 
 //Extra compile options of LibUSB
 LibUSB_COMPILE_OPTIONS:STRING=
@@ -319,11 +476,17 @@ LibUSB_LINK_FLAGS:STRING=
 //Extra link libraries of LibUSB
 LibUSB_LINK_LIBRARIES:STRING=
 
+//Path to a library.
+METAL_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Metal.framework
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/local/bin/pkg-config
+
+//Path to a library.
+QUARTZCORE_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/QuartzCore.framework
 
 //Value Computed by CMake
 SDL3_BINARY_DIR:STATIC=/Users/ben/Repositories/VoxelEngine/build/lib/sdl
@@ -584,11 +747,40 @@ VoxelEngine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 VoxelEngine_SOURCE_DIR:STATIC=/Users/ben/Repositories/VoxelEngine
 
+//Value Computed by CMake
+bgfx_BINARY_DIR:STATIC=/Users/ben/Repositories/VoxelEngine/build/lib/bgfx
+
+//Value Computed by CMake
+bgfx_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+bgfx_LIB_DEPENDS:STATIC=general;bx;general;bimg;general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Cocoa.framework;general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Metal.framework;general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/QuartzCore.framework;general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/IOKit.framework;general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreFoundation.framework;
+
+//Value Computed by CMake
+bgfx_SOURCE_DIR:STATIC=/Users/ben/Repositories/VoxelEngine/lib/bgfx
+
+//Dependencies for the target
+bimg_LIB_DEPENDS:STATIC=general;bx;
+
+//Dependencies for the target
+bimg_decode_LIB_DEPENDS:STATIC=general;bx;
+
+//Dependencies for the target
+bimg_encode_LIB_DEPENDS:STATIC=general;bx;
+
+//Dependencies for the target
+bx_LIB_DEPENDS:STATIC=general;/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/Foundation.framework;
+
+//Dependencies for the target
+example-common_LIB_DEPENDS:STATIC=general;bgfx;general;bx;general;bimg;general;bimg_decode;
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//STRINGS property for variable: BGFX_LIBRARY_TYPE
+BGFX_LIBRARY_TYPE-STRINGS:INTERNAL=STATIC;SHARED
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -661,6 +853,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/ben/Repositories/VoxelEngine
@@ -715,7 +909,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJC_COMPILER
@@ -770,6 +964,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COCOA_LIBRARY
+COCOA_LIBRARY-ADVANCED:INTERNAL=1
 //Test COMPILER_HAS_SEM_TIMEDWAIT
 COMPILER_HAS_SEM_TIMEDWAIT:INTERNAL=
 //Test COMPILER_SUPPORTS_ARMNEON
@@ -782,12 +978,24 @@ COMPILER_SUPPORTS_FOBJC_ARC:INTERNAL=1
 COMPILER_SUPPORTS_GCC_ATOMICS:INTERNAL=1
 //Test COMPILER_SUPPORTS_WNO_ERROR_DEPRECATED_DECLARATIONS
 COMPILER_SUPPORTS_WNO_ERROR_DEPRECATED_DECLARATIONS:INTERNAL=1
+//ADVANCED property for variable: COREFOUNDATION_LIBRARY
+COREFOUNDATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //Details about finding LibUSB
 FIND_PACKAGE_MESSAGE_DETAILS_LibUSB:INTERNAL=[/opt/homebrew/lib/libusb-1.0.dylib][/opt/homebrew/include/libusb-1.0][v1.0.16-or-higher()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/local/bin/pkg-config][v0.29.2()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: FOUNDATION_LIBRARY
+FOUNDATION_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//GLFW pkg-config Libs.private
+GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL= -framework Cocoa -framework IOKit -framework CoreFoundation -framework QuartzCore
+//GLFW pkg-config Requires.private
+GLFW_PKG_CONFIG_REQUIRES_PRIVATE:INTERNAL=
 //Have include alloca.h
 HAVE_ALLOCA_H:INTERNAL=1
 //Have symbol dlopen
@@ -876,6 +1084,8 @@ HAVE_ST_MTIM:INTERNAL=
 HAVE_SYSCONF:INTERNAL=1
 //Have symbol sysctlbyname
 HAVE_SYSCTLBYNAME:INTERNAL=1
+//ADVANCED property for variable: IOKIT_LIBRARY
+IOKIT_LIBRARY-ADVANCED:INTERNAL=1
 //Have symbol abs
 LIBC_HAS_ABS:INTERNAL=1
 //Have symbol acos
@@ -1132,6 +1342,8 @@ LIBC_IS_GLIBC:INTERNAL=
 LINKER_SUPPORTS_VERSION_SCRIPT:INTERNAL=
 //Test LINKER_SUPPORTS_WL_UNDEFINED_ERROR
 LINKER_SUPPORTS_WL_UNDEFINED_ERROR:INTERNAL=1
+//ADVANCED property for variable: METAL_LIBRARY
+METAL_LIBRARY-ADVANCED:INTERNAL=1
 PC_LibUSB_CFLAGS:INTERNAL=
 PC_LibUSB_CFLAGS_I:INTERNAL=
 PC_LibUSB_CFLAGS_OTHER:INTERNAL=
@@ -1161,6 +1373,8 @@ PC_LibUSB_libusb-1.0_VERSION:INTERNAL=
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QUARTZCORE_LIBRARY
+QUARTZCORE_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_CHECK_REQUIRED_INCLUDES
 SDL_CHECK_REQUIRED_INCLUDES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_CHECK_REQUIRED_LINK_OPTIONS
@@ -1172,4 +1386,6 @@ SDL_CPU_CHECK_ALL:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 __pkg_config_checked_PC_LibUSB:INTERNAL=1
+//Test flag_supported
+flag_supported:INTERNAL=1
 

@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ben/Repositories/VoxelEngine/build/CMakeFiles /Users/ben/Repositories/VoxelEngine/build//CMakeFiles/progress.marks
@@ -130,43 +175,836 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
-# Target rules for targets named SDL3-shared
+# Target rules for targets named tools
 
 # Build rule for target.
-SDL3-shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL3-shared
-.PHONY : SDL3-shared
+tools: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools
+.PHONY : tools
 
 # fast build rule for target.
-SDL3-shared/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sdl/CMakeFiles/SDL3-shared.dir/build.make lib/sdl/CMakeFiles/SDL3-shared.dir/build
-.PHONY : SDL3-shared/fast
+tools/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/CMakeFiles/tools.dir/build.make lib/bgfx/CMakeFiles/tools.dir/build
+.PHONY : tools/fast
 
 #=============================================================================
-# Target rules for targets named SDL3_test
+# Target rules for targets named bx
 
 # Build rule for target.
-SDL3_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL3_test
-.PHONY : SDL3_test
+bx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bx
+.PHONY : bx
 
 # fast build rule for target.
-SDL3_test/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sdl/CMakeFiles/SDL3_test.dir/build.make lib/sdl/CMakeFiles/SDL3_test.dir/build
-.PHONY : SDL3_test/fast
+bx/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bx.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bx.dir/build
+.PHONY : bx/fast
 
 #=============================================================================
-# Target rules for targets named SDL_uclibc
+# Target rules for targets named bin2c
 
 # Build rule for target.
-SDL_uclibc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL_uclibc
-.PHONY : SDL_uclibc
+bin2c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin2c
+.PHONY : bin2c
 
 # fast build rule for target.
-SDL_uclibc/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sdl/CMakeFiles/SDL_uclibc.dir/build.make lib/sdl/CMakeFiles/SDL_uclibc.dir/build
-.PHONY : SDL_uclibc/fast
+bin2c/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/build.make lib/bgfx/cmake/bx/CMakeFiles/bin2c.dir/build
+.PHONY : bin2c/fast
+
+#=============================================================================
+# Target rules for targets named bimg
+
+# Build rule for target.
+bimg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bimg
+.PHONY : bimg
+
+# fast build rule for target.
+bimg/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/bimg.dir/build
+.PHONY : bimg/fast
+
+#=============================================================================
+# Target rules for targets named bimg_decode
+
+# Build rule for target.
+bimg_decode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bimg_decode
+.PHONY : bimg_decode
+
+# fast build rule for target.
+bimg_decode/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/bimg_decode.dir/build
+.PHONY : bimg_decode/fast
+
+#=============================================================================
+# Target rules for targets named bimg_encode
+
+# Build rule for target.
+bimg_encode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bimg_encode
+.PHONY : bimg_encode
+
+# fast build rule for target.
+bimg_encode/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/bimg_encode.dir/build
+.PHONY : bimg_encode/fast
+
+#=============================================================================
+# Target rules for targets named texturec
+
+# Build rule for target.
+texturec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 texturec
+.PHONY : texturec
+
+# fast build rule for target.
+texturec/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/build.make lib/bgfx/cmake/bimg/CMakeFiles/texturec.dir/build
+.PHONY : texturec/fast
+
+#=============================================================================
+# Target rules for targets named bgfx
+
+# Build rule for target.
+bgfx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bgfx
+.PHONY : bgfx
+
+# fast build rule for target.
+bgfx/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/bgfx.dir/build
+.PHONY : bgfx/fast
+
+#=============================================================================
+# Target rules for targets named texturev
+
+# Build rule for target.
+texturev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 texturev
+.PHONY : texturev
+
+# fast build rule for target.
+texturev/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/texturev.dir/build
+.PHONY : texturev/fast
+
+#=============================================================================
+# Target rules for targets named geometryc
+
+# Build rule for target.
+geometryc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometryc
+.PHONY : geometryc
+
+# fast build rule for target.
+geometryc/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryc.dir/build
+.PHONY : geometryc/fast
+
+#=============================================================================
+# Target rules for targets named geometryv
+
+# Build rule for target.
+geometryv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometryv
+.PHONY : geometryv
+
+# fast build rule for target.
+geometryv/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/geometryv.dir/build
+.PHONY : geometryv/fast
+
+#=============================================================================
+# Target rules for targets named spirv-opt
+
+# Build rule for target.
+spirv-opt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spirv-opt
+.PHONY : spirv-opt
+
+# fast build rule for target.
+spirv-opt/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/spirv-opt.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/spirv-opt.dir/build
+.PHONY : spirv-opt/fast
+
+#=============================================================================
+# Target rules for targets named spirv-cross
+
+# Build rule for target.
+spirv-cross: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spirv-cross
+.PHONY : spirv-cross
+
+# fast build rule for target.
+spirv-cross/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/spirv-cross.dir/build
+.PHONY : spirv-cross/fast
+
+#=============================================================================
+# Target rules for targets named glslang
+
+# Build rule for target.
+glslang: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glslang
+.PHONY : glslang
+
+# fast build rule for target.
+glslang/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/glslang.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/glslang.dir/build
+.PHONY : glslang/fast
+
+#=============================================================================
+# Target rules for targets named glsl-optimizer
+
+# Build rule for target.
+glsl-optimizer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glsl-optimizer
+.PHONY : glsl-optimizer
+
+# fast build rule for target.
+glsl-optimizer/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/glsl-optimizer.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/glsl-optimizer.dir/build
+.PHONY : glsl-optimizer/fast
+
+#=============================================================================
+# Target rules for targets named fcpp
+
+# Build rule for target.
+fcpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fcpp
+.PHONY : fcpp
+
+# fast build rule for target.
+fcpp/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/fcpp.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/fcpp.dir/build
+.PHONY : fcpp/fast
+
+#=============================================================================
+# Target rules for targets named shaderc
+
+# Build rule for target.
+shaderc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shaderc
+.PHONY : shaderc
+
+# fast build rule for target.
+shaderc/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/shaderc.dir/build
+.PHONY : shaderc/fast
+
+#=============================================================================
+# Target rules for targets named examples
+
+# Build rule for target.
+examples: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples
+.PHONY : examples
+
+# fast build rule for target.
+examples/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/examples.dir/build
+.PHONY : examples/fast
+
+#=============================================================================
+# Target rules for targets named example-common
+
+# Build rule for target.
+example-common: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-common
+.PHONY : example-common
+
+# fast build rule for target.
+example-common/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-common.dir/build
+.PHONY : example-common/fast
+
+#=============================================================================
+# Target rules for targets named example-00-helloworld
+
+# Build rule for target.
+example-00-helloworld: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-00-helloworld
+.PHONY : example-00-helloworld
+
+# fast build rule for target.
+example-00-helloworld/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-00-helloworld.dir/build
+.PHONY : example-00-helloworld/fast
+
+#=============================================================================
+# Target rules for targets named example-01-cubes
+
+# Build rule for target.
+example-01-cubes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-01-cubes
+.PHONY : example-01-cubes
+
+# fast build rule for target.
+example-01-cubes/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-01-cubes.dir/build
+.PHONY : example-01-cubes/fast
+
+#=============================================================================
+# Target rules for targets named example-02-metaballs
+
+# Build rule for target.
+example-02-metaballs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-02-metaballs
+.PHONY : example-02-metaballs
+
+# fast build rule for target.
+example-02-metaballs/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-02-metaballs.dir/build
+.PHONY : example-02-metaballs/fast
+
+#=============================================================================
+# Target rules for targets named example-03-raymarch
+
+# Build rule for target.
+example-03-raymarch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-03-raymarch
+.PHONY : example-03-raymarch
+
+# fast build rule for target.
+example-03-raymarch/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-03-raymarch.dir/build
+.PHONY : example-03-raymarch/fast
+
+#=============================================================================
+# Target rules for targets named example-04-mesh
+
+# Build rule for target.
+example-04-mesh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-04-mesh
+.PHONY : example-04-mesh
+
+# fast build rule for target.
+example-04-mesh/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-04-mesh.dir/build
+.PHONY : example-04-mesh/fast
+
+#=============================================================================
+# Target rules for targets named example-05-instancing
+
+# Build rule for target.
+example-05-instancing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-05-instancing
+.PHONY : example-05-instancing
+
+# fast build rule for target.
+example-05-instancing/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-05-instancing.dir/build
+.PHONY : example-05-instancing/fast
+
+#=============================================================================
+# Target rules for targets named example-06-bump
+
+# Build rule for target.
+example-06-bump: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-06-bump
+.PHONY : example-06-bump
+
+# fast build rule for target.
+example-06-bump/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-06-bump.dir/build
+.PHONY : example-06-bump/fast
+
+#=============================================================================
+# Target rules for targets named example-07-callback
+
+# Build rule for target.
+example-07-callback: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-07-callback
+.PHONY : example-07-callback
+
+# fast build rule for target.
+example-07-callback/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-07-callback.dir/build
+.PHONY : example-07-callback/fast
+
+#=============================================================================
+# Target rules for targets named example-08-update
+
+# Build rule for target.
+example-08-update: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-08-update
+.PHONY : example-08-update
+
+# fast build rule for target.
+example-08-update/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-08-update.dir/build
+.PHONY : example-08-update/fast
+
+#=============================================================================
+# Target rules for targets named example-09-hdr
+
+# Build rule for target.
+example-09-hdr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-09-hdr
+.PHONY : example-09-hdr
+
+# fast build rule for target.
+example-09-hdr/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-09-hdr.dir/build
+.PHONY : example-09-hdr/fast
+
+#=============================================================================
+# Target rules for targets named example-10-font
+
+# Build rule for target.
+example-10-font: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-10-font
+.PHONY : example-10-font
+
+# fast build rule for target.
+example-10-font/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-10-font.dir/build
+.PHONY : example-10-font/fast
+
+#=============================================================================
+# Target rules for targets named example-11-fontsdf
+
+# Build rule for target.
+example-11-fontsdf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-11-fontsdf
+.PHONY : example-11-fontsdf
+
+# fast build rule for target.
+example-11-fontsdf/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-11-fontsdf.dir/build
+.PHONY : example-11-fontsdf/fast
+
+#=============================================================================
+# Target rules for targets named example-12-lod
+
+# Build rule for target.
+example-12-lod: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-12-lod
+.PHONY : example-12-lod
+
+# fast build rule for target.
+example-12-lod/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-12-lod.dir/build
+.PHONY : example-12-lod/fast
+
+#=============================================================================
+# Target rules for targets named example-13-stencil
+
+# Build rule for target.
+example-13-stencil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-13-stencil
+.PHONY : example-13-stencil
+
+# fast build rule for target.
+example-13-stencil/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-13-stencil.dir/build
+.PHONY : example-13-stencil/fast
+
+#=============================================================================
+# Target rules for targets named example-14-shadowvolumes
+
+# Build rule for target.
+example-14-shadowvolumes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-14-shadowvolumes
+.PHONY : example-14-shadowvolumes
+
+# fast build rule for target.
+example-14-shadowvolumes/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-14-shadowvolumes.dir/build
+.PHONY : example-14-shadowvolumes/fast
+
+#=============================================================================
+# Target rules for targets named example-15-shadowmaps-simple
+
+# Build rule for target.
+example-15-shadowmaps-simple: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-15-shadowmaps-simple
+.PHONY : example-15-shadowmaps-simple
+
+# fast build rule for target.
+example-15-shadowmaps-simple/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-15-shadowmaps-simple.dir/build
+.PHONY : example-15-shadowmaps-simple/fast
+
+#=============================================================================
+# Target rules for targets named example-16-shadowmaps
+
+# Build rule for target.
+example-16-shadowmaps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-16-shadowmaps
+.PHONY : example-16-shadowmaps
+
+# fast build rule for target.
+example-16-shadowmaps/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-16-shadowmaps.dir/build
+.PHONY : example-16-shadowmaps/fast
+
+#=============================================================================
+# Target rules for targets named example-17-drawstress
+
+# Build rule for target.
+example-17-drawstress: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-17-drawstress
+.PHONY : example-17-drawstress
+
+# fast build rule for target.
+example-17-drawstress/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-17-drawstress.dir/build
+.PHONY : example-17-drawstress/fast
+
+#=============================================================================
+# Target rules for targets named example-18-ibl
+
+# Build rule for target.
+example-18-ibl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-18-ibl
+.PHONY : example-18-ibl
+
+# fast build rule for target.
+example-18-ibl/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-18-ibl.dir/build
+.PHONY : example-18-ibl/fast
+
+#=============================================================================
+# Target rules for targets named example-19-oit
+
+# Build rule for target.
+example-19-oit: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-19-oit
+.PHONY : example-19-oit
+
+# fast build rule for target.
+example-19-oit/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-19-oit.dir/build
+.PHONY : example-19-oit/fast
+
+#=============================================================================
+# Target rules for targets named example-20-nanovg
+
+# Build rule for target.
+example-20-nanovg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-20-nanovg
+.PHONY : example-20-nanovg
+
+# fast build rule for target.
+example-20-nanovg/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-20-nanovg.dir/build
+.PHONY : example-20-nanovg/fast
+
+#=============================================================================
+# Target rules for targets named example-22-windows
+
+# Build rule for target.
+example-22-windows: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-22-windows
+.PHONY : example-22-windows
+
+# fast build rule for target.
+example-22-windows/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-22-windows.dir/build
+.PHONY : example-22-windows/fast
+
+#=============================================================================
+# Target rules for targets named example-23-vectordisplay
+
+# Build rule for target.
+example-23-vectordisplay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-23-vectordisplay
+.PHONY : example-23-vectordisplay
+
+# fast build rule for target.
+example-23-vectordisplay/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-23-vectordisplay.dir/build
+.PHONY : example-23-vectordisplay/fast
+
+#=============================================================================
+# Target rules for targets named example-24-nbody
+
+# Build rule for target.
+example-24-nbody: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-24-nbody
+.PHONY : example-24-nbody
+
+# fast build rule for target.
+example-24-nbody/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-24-nbody.dir/build
+.PHONY : example-24-nbody/fast
+
+#=============================================================================
+# Target rules for targets named example-25-c99
+
+# Build rule for target.
+example-25-c99: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-25-c99
+.PHONY : example-25-c99
+
+# fast build rule for target.
+example-25-c99/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-25-c99.dir/build
+.PHONY : example-25-c99/fast
+
+#=============================================================================
+# Target rules for targets named example-26-occlusion
+
+# Build rule for target.
+example-26-occlusion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-26-occlusion
+.PHONY : example-26-occlusion
+
+# fast build rule for target.
+example-26-occlusion/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-26-occlusion.dir/build
+.PHONY : example-26-occlusion/fast
+
+#=============================================================================
+# Target rules for targets named example-27-terrain
+
+# Build rule for target.
+example-27-terrain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-27-terrain
+.PHONY : example-27-terrain
+
+# fast build rule for target.
+example-27-terrain/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-27-terrain.dir/build
+.PHONY : example-27-terrain/fast
+
+#=============================================================================
+# Target rules for targets named example-28-wireframe
+
+# Build rule for target.
+example-28-wireframe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-28-wireframe
+.PHONY : example-28-wireframe
+
+# fast build rule for target.
+example-28-wireframe/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-28-wireframe.dir/build
+.PHONY : example-28-wireframe/fast
+
+#=============================================================================
+# Target rules for targets named example-29-debugdraw
+
+# Build rule for target.
+example-29-debugdraw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-29-debugdraw
+.PHONY : example-29-debugdraw
+
+# fast build rule for target.
+example-29-debugdraw/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-29-debugdraw.dir/build
+.PHONY : example-29-debugdraw/fast
+
+#=============================================================================
+# Target rules for targets named example-30-picking
+
+# Build rule for target.
+example-30-picking: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-30-picking
+.PHONY : example-30-picking
+
+# fast build rule for target.
+example-30-picking/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-30-picking.dir/build
+.PHONY : example-30-picking/fast
+
+#=============================================================================
+# Target rules for targets named example-31-rsm
+
+# Build rule for target.
+example-31-rsm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-31-rsm
+.PHONY : example-31-rsm
+
+# fast build rule for target.
+example-31-rsm/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-31-rsm.dir/build
+.PHONY : example-31-rsm/fast
+
+#=============================================================================
+# Target rules for targets named example-32-particles
+
+# Build rule for target.
+example-32-particles: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-32-particles
+.PHONY : example-32-particles
+
+# fast build rule for target.
+example-32-particles/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-32-particles.dir/build
+.PHONY : example-32-particles/fast
+
+#=============================================================================
+# Target rules for targets named example-33-pom
+
+# Build rule for target.
+example-33-pom: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-33-pom
+.PHONY : example-33-pom
+
+# fast build rule for target.
+example-33-pom/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-33-pom.dir/build
+.PHONY : example-33-pom/fast
+
+#=============================================================================
+# Target rules for targets named example-34-mvs
+
+# Build rule for target.
+example-34-mvs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-34-mvs
+.PHONY : example-34-mvs
+
+# fast build rule for target.
+example-34-mvs/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-34-mvs.dir/build
+.PHONY : example-34-mvs/fast
+
+#=============================================================================
+# Target rules for targets named example-35-dynamic
+
+# Build rule for target.
+example-35-dynamic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-35-dynamic
+.PHONY : example-35-dynamic
+
+# fast build rule for target.
+example-35-dynamic/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-35-dynamic.dir/build
+.PHONY : example-35-dynamic/fast
+
+#=============================================================================
+# Target rules for targets named example-36-sky
+
+# Build rule for target.
+example-36-sky: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-36-sky
+.PHONY : example-36-sky
+
+# fast build rule for target.
+example-36-sky/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-36-sky.dir/build
+.PHONY : example-36-sky/fast
+
+#=============================================================================
+# Target rules for targets named example-38-bloom
+
+# Build rule for target.
+example-38-bloom: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-38-bloom
+.PHONY : example-38-bloom
+
+# fast build rule for target.
+example-38-bloom/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-38-bloom.dir/build
+.PHONY : example-38-bloom/fast
+
+#=============================================================================
+# Target rules for targets named example-39-assao
+
+# Build rule for target.
+example-39-assao: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-39-assao
+.PHONY : example-39-assao
+
+# fast build rule for target.
+example-39-assao/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-39-assao.dir/build
+.PHONY : example-39-assao/fast
+
+#=============================================================================
+# Target rules for targets named example-40-svt
+
+# Build rule for target.
+example-40-svt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-40-svt
+.PHONY : example-40-svt
+
+# fast build rule for target.
+example-40-svt/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-40-svt.dir/build
+.PHONY : example-40-svt/fast
+
+#=============================================================================
+# Target rules for targets named example-42-bunnylod
+
+# Build rule for target.
+example-42-bunnylod: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-42-bunnylod
+.PHONY : example-42-bunnylod
+
+# fast build rule for target.
+example-42-bunnylod/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-42-bunnylod.dir/build
+.PHONY : example-42-bunnylod/fast
+
+#=============================================================================
+# Target rules for targets named example-43-denoise
+
+# Build rule for target.
+example-43-denoise: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-43-denoise
+.PHONY : example-43-denoise
+
+# fast build rule for target.
+example-43-denoise/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-43-denoise.dir/build
+.PHONY : example-43-denoise/fast
+
+#=============================================================================
+# Target rules for targets named example-44-sss
+
+# Build rule for target.
+example-44-sss: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-44-sss
+.PHONY : example-44-sss
+
+# fast build rule for target.
+example-44-sss/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-44-sss.dir/build
+.PHONY : example-44-sss/fast
+
+#=============================================================================
+# Target rules for targets named example-45-bokeh
+
+# Build rule for target.
+example-45-bokeh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-45-bokeh
+.PHONY : example-45-bokeh
+
+# fast build rule for target.
+example-45-bokeh/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-45-bokeh.dir/build
+.PHONY : example-45-bokeh/fast
+
+#=============================================================================
+# Target rules for targets named example-46-fsr
+
+# Build rule for target.
+example-46-fsr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-46-fsr
+.PHONY : example-46-fsr
+
+# fast build rule for target.
+example-46-fsr/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-46-fsr.dir/build
+.PHONY : example-46-fsr/fast
+
+#=============================================================================
+# Target rules for targets named example-47-pixelformats
+
+# Build rule for target.
+example-47-pixelformats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-47-pixelformats
+.PHONY : example-47-pixelformats
+
+# fast build rule for target.
+example-47-pixelformats/fast:
+	$(MAKE) $(MAKESILENT) -f lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/build.make lib/bgfx/cmake/bgfx/CMakeFiles/example-47-pixelformats.dir/build
+.PHONY : example-47-pixelformats/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -178,8 +1016,34 @@ uninstall: cmake_check_build_system
 
 # fast build rule for target.
 uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sdl/CMakeFiles/uninstall.dir/build.make lib/sdl/CMakeFiles/uninstall.dir/build
+	$(MAKE) $(MAKESILENT) -f lib/glfw/CMakeFiles/uninstall.dir/build.make lib/glfw/CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named update_mappings
+
+# Build rule for target.
+update_mappings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
+.PHONY : update_mappings
+
+# fast build rule for target.
+update_mappings/fast:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/update_mappings.dir/build.make lib/glfw/src/CMakeFiles/update_mappings.dir/build
+.PHONY : update_mappings/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -212,12 +1076,79 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... examples"
+	@echo "... tools"
 	@echo "... uninstall"
-	@echo "... SDL3-shared"
-	@echo "... SDL3_test"
-	@echo "... SDL_uclibc"
+	@echo "... update_mappings"
+	@echo "... bgfx"
+	@echo "... bimg"
+	@echo "... bimg_decode"
+	@echo "... bimg_encode"
+	@echo "... bin2c"
+	@echo "... bx"
+	@echo "... example-00-helloworld"
+	@echo "... example-01-cubes"
+	@echo "... example-02-metaballs"
+	@echo "... example-03-raymarch"
+	@echo "... example-04-mesh"
+	@echo "... example-05-instancing"
+	@echo "... example-06-bump"
+	@echo "... example-07-callback"
+	@echo "... example-08-update"
+	@echo "... example-09-hdr"
+	@echo "... example-10-font"
+	@echo "... example-11-fontsdf"
+	@echo "... example-12-lod"
+	@echo "... example-13-stencil"
+	@echo "... example-14-shadowvolumes"
+	@echo "... example-15-shadowmaps-simple"
+	@echo "... example-16-shadowmaps"
+	@echo "... example-17-drawstress"
+	@echo "... example-18-ibl"
+	@echo "... example-19-oit"
+	@echo "... example-20-nanovg"
+	@echo "... example-22-windows"
+	@echo "... example-23-vectordisplay"
+	@echo "... example-24-nbody"
+	@echo "... example-25-c99"
+	@echo "... example-26-occlusion"
+	@echo "... example-27-terrain"
+	@echo "... example-28-wireframe"
+	@echo "... example-29-debugdraw"
+	@echo "... example-30-picking"
+	@echo "... example-31-rsm"
+	@echo "... example-32-particles"
+	@echo "... example-33-pom"
+	@echo "... example-34-mvs"
+	@echo "... example-35-dynamic"
+	@echo "... example-36-sky"
+	@echo "... example-38-bloom"
+	@echo "... example-39-assao"
+	@echo "... example-40-svt"
+	@echo "... example-42-bunnylod"
+	@echo "... example-43-denoise"
+	@echo "... example-44-sss"
+	@echo "... example-45-bokeh"
+	@echo "... example-46-fsr"
+	@echo "... example-47-pixelformats"
+	@echo "... example-common"
+	@echo "... fcpp"
 	@echo "... game"
+	@echo "... geometryc"
+	@echo "... geometryv"
+	@echo "... glfw"
+	@echo "... glsl-optimizer"
+	@echo "... glslang"
+	@echo "... shaderc"
+	@echo "... spirv-cross"
+	@echo "... spirv-opt"
+	@echo "... texturec"
+	@echo "... texturev"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

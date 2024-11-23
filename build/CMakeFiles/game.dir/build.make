@@ -92,8 +92,11 @@ game_EXTERNAL_OBJECTS =
 
 game: CMakeFiles/game.dir/src/main.cpp.o
 game: CMakeFiles/game.dir/build.make
-game: lib/sdl/libSDL3.0.dylib
-game: /Users/ben/Repositories/VoxelEngine/lib/sdl/src/dynapi/SDL_dynapi.sym
+game: lib/bgfx/cmake/bgfx/libbgfx.a
+game: lib/bgfx/cmake/bx/libbx.a
+game: lib/glfw/src/libglfw3.a
+game: lib/bgfx/cmake/bimg/libbimg.a
+game: lib/bgfx/cmake/bx/libbx.a
 game: CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ben/Repositories/VoxelEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
