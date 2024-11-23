@@ -1,0 +1,668 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library 'System' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library 'c++' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the OBJC compiler identification source file "CMakeOBJCCompilerId.m" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library 'System' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Determining if the __GLIBC__ exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_ffb40/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ffb40.dir/build.make CMakeFiles/cmTC_ffb40.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffb40.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_ffb40.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ffb40.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ffb40.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier '__GLIBC__'
+  return ((int*)(&__GLIBC__))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ffb40.dir/build.make:79: CMakeFiles/cmTC_ffb40.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ffb40/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __GLIBC__
+  return ((int*)(&__GLIBC__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test LINKER_SUPPORTS_VERSION_SCRIPT failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_f87a7/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f87a7.dir/build.make CMakeFiles/cmTC_f87a7.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f87a7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DLINKER_SUPPORTS_VERSION_SCRIPT  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_f87a7.dir/src.c.o -MF CMakeFiles/cmTC_f87a7.dir/src.c.o.d -o CMakeFiles/cmTC_f87a7.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f87a7
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f87a7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,--version-script=/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/dummy.sym CMakeFiles/cmTC_f87a7.dir/src.c.o -o cmTC_f87a7 
+ld: unknown options: --version-script=/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/dummy.sym 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_f87a7.dir/build.make:100: cmTC_f87a7] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f87a7/fast] Error 2
+
+
+Source file was:
+int func(void) {return 0;} int main(int argc,char*argv[]){(void)argc;(void)argv;return func();}
+Determining if the include file malloc.h exists failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_e1bdf/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_e1bdf.dir/build.make CMakeFiles/cmTC_e1bdf.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1bdf.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_e1bdf.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_e1bdf.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_e1bdf.dir/CheckIncludeFile.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'malloc.h' file not found
+#include <malloc.h>
+         ^~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e1bdf.dir/build.make:79: CMakeFiles/cmTC_e1bdf.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e1bdf/fast] Error 2
+
+
+
+Determining if the fopen64 exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_d99ca/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_d99ca.dir/build.make CMakeFiles/cmTC_d99ca.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d99ca.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_d99ca.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d99ca.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d99ca.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier 'fopen64'; did you mean 'fopen'?
+  return ((int*)(&fopen64))[argc];
+                  ^~~~~~~
+                  fopen
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h:145:7: note: 'fopen' declared here
+FILE    *fopen(const char * __restrict __filename, const char * __restrict __mode) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fopen));
+         ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_d99ca.dir/build.make:79: CMakeFiles/cmTC_d99ca.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d99ca/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fopen64
+  return ((int*)(&fopen64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fseeko64 exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_ff26b/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ff26b.dir/build.make CMakeFiles/cmTC_ff26b.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff26b.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_ff26b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ff26b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ff26b.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier 'fseeko64'; did you mean 'fseeko'?
+  return ((int*)(&fseeko64))[argc];
+                  ^~~~~~~~
+                  fseeko
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h:330:6: note: 'fseeko' declared here
+int      fseeko(FILE * __stream, off_t __offset, int __whence);
+         ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ff26b.dir/build.make:79: CMakeFiles/cmTC_ff26b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ff26b/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fseeko64
+  return ((int*)(&fseeko64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _i64toa exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_7e375/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_7e375.dir/build.make CMakeFiles/cmTC_7e375.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e375.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_7e375.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7e375.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7e375.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier '_i64toa'
+  return ((int*)(&_i64toa))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_7e375.dir/build.make:79: CMakeFiles/cmTC_7e375.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7e375/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _i64toa
+  return ((int*)(&_i64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the itoa exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_586f2/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_586f2.dir/build.make CMakeFiles/cmTC_586f2.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_586f2.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_586f2.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_586f2.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_586f2.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier 'itoa'
+  return ((int*)(&itoa))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_586f2.dir/build.make:79: CMakeFiles/cmTC_586f2.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_586f2/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef itoa
+  return ((int*)(&itoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ltoa exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_b6f1e/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_b6f1e.dir/build.make CMakeFiles/cmTC_b6f1e.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6f1e.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_b6f1e.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b6f1e.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b6f1e.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier '_ltoa'
+  return ((int*)(&_ltoa))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b6f1e.dir/build.make:79: CMakeFiles/cmTC_b6f1e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b6f1e/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ltoa
+  return ((int*)(&_ltoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sqr exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_c14e1/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_c14e1.dir/build.make CMakeFiles/cmTC_c14e1.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c14e1.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_c14e1.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_c14e1.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_c14e1.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:25:19: error: use of undeclared identifier 'sqr'; did you mean 'sqrt'?
+  return ((int*)(&sqr))[argc];
+                  ^~~
+                  sqrt
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/math.h:434:15: note: 'sqrt' declared here
+extern double sqrt(double);
+              ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_c14e1.dir/build.make:79: CMakeFiles/cmTC_c14e1.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c14e1/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+#include <iconv.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <math.h>
+#include <memory.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <time.h>
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sqr
+  return ((int*)(&sqr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test LIBC_HAS_ISINFF failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_f859d/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f859d.dir/build.make CMakeFiles/cmTC_f859d.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f859d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DLIBC_HAS_ISINFF  -D_GNU_SOURCE=1 -Wfloat-conversion -Werror -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_f859d.dir/src.c.o -MF CMakeFiles/cmTC_f859d.dir/src.c.o.d -o CMakeFiles/cmTC_f859d.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:5:16: error: call to undeclared function 'isinff'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        return isinff(f);
+               ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f859d.dir/build.make:79: CMakeFiles/cmTC_f859d.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f859d/fast] Error 2
+
+
+Source file was:
+
+      #include <math.h>
+      int main() {
+        float f = 3.14159f;
+        return isinff(f);
+      }
+    
+Performing C SOURCE FILE Test LIBC_HAS_ISNANF failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_8147b/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_8147b.dir/build.make CMakeFiles/cmTC_8147b.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8147b.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DLIBC_HAS_ISNANF  -D_GNU_SOURCE=1 -Wfloat-conversion -Werror -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_8147b.dir/src.c.o -MF CMakeFiles/cmTC_8147b.dir/src.c.o.d -o CMakeFiles/cmTC_8147b.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:5:16: error: call to undeclared function 'isnanf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        return isnanf(f);
+               ^
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:5:16: note: did you mean 'nanf'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/math.h:516:14: note: 'nanf' declared here
+extern float nanf(const char *);
+             ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_8147b.dir/build.make:79: CMakeFiles/cmTC_8147b.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8147b/fast] Error 2
+
+
+Source file was:
+
+      #include <math.h>
+      int main() {
+        float f = 3.14159f;
+        return isnanf(f);
+      }
+    
+Determining if the fdatasync exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_ca57d/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ca57d.dir/build.make CMakeFiles/cmTC_ca57d.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca57d.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_ca57d.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ca57d.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ca57d.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'fdatasync'
+  return ((int*)(&fdatasync))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ca57d.dir/build.make:79: CMakeFiles/cmTC_ca57d.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ca57d/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fdatasync
+  return ((int*)(&fdatasync))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getauxval exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_bb5f1/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_bb5f1.dir/build.make CMakeFiles/cmTC_bb5f1.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb5f1.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_bb5f1.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_bb5f1.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_bb5f1.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'sys/auxv.h' file not found
+#include <sys/auxv.h>
+         ^~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bb5f1.dir/build.make:79: CMakeFiles/cmTC_bb5f1.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bb5f1/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getauxval
+  return ((int*)(&getauxval))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_f6978/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_f6978.dir/build.make CMakeFiles/cmTC_f6978.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6978.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_f6978.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_f6978.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f6978.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'sys/auxv.h' file not found
+#include <sys/auxv.h>
+         ^~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f6978.dir/build.make:79: CMakeFiles/cmTC_f6978.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f6978/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the memfd_create exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_5fe6a/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_5fe6a.dir/build.make CMakeFiles/cmTC_5fe6a.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5fe6a.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_5fe6a.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_5fe6a.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_5fe6a.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'memfd_create'
+  return ((int*)(&memfd_create))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_5fe6a.dir/build.make:79: CMakeFiles/cmTC_5fe6a.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5fe6a/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/mman.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memfd_create
+  return ((int*)(&memfd_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the posix_fallocate exist failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_1285d/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_1285d.dir/build.make CMakeFiles/cmTC_1285d.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1285d.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_1285d.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_1285d.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_1285d.dir/CheckSymbolExists.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'posix_fallocate'
+  return ((int*)(&posix_fallocate))[argc];
+                  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_1285d.dir/build.make:79: CMakeFiles/cmTC_1285d.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1285d/fast] Error 2
+
+
+File /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <fcntl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_fallocate
+  return ((int*)(&posix_fallocate))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test HAVE_ST_MTIM failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_c6428/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_c6428.dir/build.make CMakeFiles/cmTC_c6428.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c6428.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_ST_MTIM  -D_GNU_SOURCE=1 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_c6428.dir/src.c.o -MF CMakeFiles/cmTC_c6428.dir/src.c.o.d -o CMakeFiles/cmTC_c6428.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:6:36: error: no member named 'st_mtim' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->st_mtim);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_c6428.dir/build.make:79: CMakeFiles/cmTC_c6428.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c6428/fast] Error 2
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtim);
+  return 0;
+}
+
+Performing C SOURCE FILE Test COMPILER_HAS_SEM_TIMEDWAIT failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_5d1b0/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_5d1b0.dir/build.make CMakeFiles/cmTC_5d1b0.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d1b0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DCOMPILER_HAS_SEM_TIMEDWAIT  -D_GNU_SOURCE=1 -D_REENTRANT -lpthread -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_5d1b0.dir/src.c.o -MF CMakeFiles/cmTC_5d1b0.dir/src.c.o.d -o CMakeFiles/cmTC_5d1b0.dir/src.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:5:19: error: call to undeclared function 'sem_timedwait'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+                  sem_timedwait(NULL, NULL);
+                  ^
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/src.c:5:19: note: did you mean 'sem_trywait'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/semaphore.h:58:5: note: 'sem_trywait' declared here
+int sem_trywait(sem_t *);
+    ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_5d1b0.dir/build.make:79: CMakeFiles/cmTC_5d1b0.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5d1b0/fast] Error 2
+
+
+Source file was:
+
+              #include <pthread.h>
+              #include <semaphore.h>
+              int main(int argc, char **argv) {
+                  sem_timedwait(NULL, NULL);
+                  return 0;
+              }
+Determining if the include file pthread_np.h exists failed with the following output:
+Change Dir: /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_3e33c/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3e33c.dir/build.make CMakeFiles/cmTC_3e33c.dir/build
+gmake[1]: Entering directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e33c.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE=1 -D_REENTRANT -lpthread -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_3e33c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3e33c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3e33c.dir/CheckIncludeFile.c.o -c /Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'pthread_np.h' file not found
+#include <pthread_np.h>
+         ^~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_3e33c.dir/build.make:79: CMakeFiles/cmTC_3e33c.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3e33c/fast] Error 2
+
+
+

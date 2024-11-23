@@ -1,0 +1,9 @@
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/game.dir
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/edit_cache.dir
+/Users/ben/Repositories/VoxelEngine/build/CMakeFiles/rebuild_cache.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/SDL3-shared.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/SDL3_test.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/SDL_uclibc.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/uninstall.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/edit_cache.dir
+/Users/ben/Repositories/VoxelEngine/build/lib/sdl/CMakeFiles/rebuild_cache.dir
