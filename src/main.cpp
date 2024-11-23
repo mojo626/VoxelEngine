@@ -13,6 +13,7 @@
 #include "../res/shaders/basic/voxel.cs.h"
 
 #include "ComputeManager.hpp"
+#include "player.hpp"
 
 
 #define WINDOW_WIDTH 800
@@ -39,7 +40,9 @@ static const uint16_t s_quadIndices[] = { 0, 1, 2, 2, 3, 0, };
 
 int main() {
 
-    ComputeManager compute(128, 128);
+    ComputeManager compute(512, 512, 128);
+
+    Player player;
     
     Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT);
 
@@ -68,22 +71,13 @@ int main() {
 
     compute.init();
 
-    float camData[2][4];
-    camData[0][0] = 0.0;
-    camData[0][1] = 0.0;
-    camData[0][2] = 0.0;
-
-    camData[1][0] = 0.0;
-    camData[1][1] = 0.0;
-    camData[1][2] = 1.0;
+    
 
     float sizeData[4];
-    sizeData[0] = 128;
-    sizeData[1] = 128;
+    sizeData[0] = 512;
+    sizeData[1] = 512;
 
-    float camYaw = 0.0f;
-    float camPitch = 0.0f;
-    float walkSpeed = 0.1f;
+    
 
     bgfx::setUniform(sizeUniform, sizeData, 1);
 
@@ -92,63 +86,10 @@ int main() {
 
         window.startRendering();
 
-        if (window.keyboard[GLFW_KEY_A])
-        {
-            float rightX = cos(camYaw + (3.1415 / 2));
-            float rightZ = sin(camYaw + (3.1415 / 2));
-
-            camData[0][2] += rightZ * walkSpeed;
-            camData[0][0] += rightX * walkSpeed;
-        }
-        if (window.keyboard[GLFW_KEY_D])
-        {
-            float rightX = cos(camYaw + (3.1415 / 2));
-            float rightZ = sin(camYaw + (3.1415 / 2));
-
-            camData[0][2] -= rightZ * walkSpeed;
-            camData[0][0] -= rightX * walkSpeed;
-        }
-        if (window.keyboard[GLFW_KEY_W])
-        {
-            float forwardX = cos(camYaw);
-            float forwardZ = sin(camYaw);
-
-            camData[0][2] += forwardZ * walkSpeed;
-            camData[0][0] += forwardX * walkSpeed;
-        }
-        if (window.keyboard[GLFW_KEY_S])
-        {
-            float forwardX = cos(camYaw);
-            float forwardZ = sin(camYaw);
-
-            camData[0][2] -= forwardZ * walkSpeed;
-            camData[0][0] -= forwardX * walkSpeed;
-        }
-
-        if (window.keyboard[GLFW_KEY_LEFT])
-        {
-            camYaw += 0.1;
-        }
-        if (window.keyboard[GLFW_KEY_RIGHT])
-        {
-            camYaw -= 0.1;
-        }
-
-        if (window.keyboard[GLFW_KEY_UP])
-        {
-            camPitch += 0.1;
-        }
-        if (window.keyboard[GLFW_KEY_DOWN])
-        {
-            camPitch -= 0.1;
-        }
-
-        camData[1][0] = cos(camYaw) * cos(camPitch);
-        camData[1][2] = sin(camYaw) * cos(camPitch);
-        camData[1][1] = sin(camPitch);
+        player.update(&window);
         
 
-        bgfx::setUniform(camUniform, camData, 2);
+        bgfx::setUniform(camUniform, player.getCamData().camData, 2);
         
         compute.dispatch();
 

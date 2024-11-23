@@ -32,8 +32,8 @@ void main()
     vec3 rayDir = normalize(clipPos);
 
 
-    float step = 0.1;
-    float maxDis = 100.0;
+    float step = 0.05;
+    float maxDis = 50.0;
 
     for (float i = 0; i < maxDis; i += step) {
         vec3 rayPos = camData[0].xyz + (rayDir * i);

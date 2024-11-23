@@ -12,22 +12,24 @@ class ComputeManager {
     public:
         int textureWidth;
         int textureHeight;
+        int tex3dSize;
         bgfx::ProgramHandle computeProgram;
         bgfx::TextureHandle inputTexture;
         bgfx::TextureHandle outputTexture;
 
-        ComputeManager(int textureWidth, int textureHeight) {
+        ComputeManager(int textureWidth, int textureHeight, int tex3dSize) {
 
 
             //Setting up compute shader
             this->textureWidth = textureWidth;
             this->textureHeight = textureHeight;
+            this->tex3dSize = tex3dSize;
         }
 
         void init()
         {
             // Create input texture with random data
-            std::vector<float> inputTextureData(textureWidth * textureHeight * textureWidth * 4);
+            std::vector<float> inputTextureData(tex3dSize * tex3dSize * tex3dSize * 4);
             for (uint32_t i = 0; i < inputTextureData.size(); i+=4) {
                 int input = (rand() / (float)RAND_MAX) > 0.5f ? 1.0f : 0.0f;
                 inputTextureData[i] = input;
@@ -44,9 +46,9 @@ class ComputeManager {
 
             // Create input texture (RGBA32F format)
             inputTexture = bgfx::createTexture3D(
-                textureWidth,
-                textureHeight,
-                textureWidth,
+                tex3dSize,
+                tex3dSize,
+                tex3dSize,
                 false,
                 bgfx::TextureFormat::RGBA32F,
                 BGFX_TEXTURE_COMPUTE_WRITE | BGFX_SAMPLER_POINT,

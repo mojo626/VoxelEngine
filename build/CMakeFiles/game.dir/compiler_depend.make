@@ -1449,8 +1449,11 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h \
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/gol.cs.h \
   /Users/ben/Repositories/VoxelEngine/res/shaders/basic/voxel.cs.h \
-  /Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp
+  /Users/ben/Repositories/VoxelEngine/src/ComputeManager.hpp \
+  /Users/ben/Repositories/VoxelEngine/src/player.hpp
 
+
+/Users/ben/Repositories/VoxelEngine/src/player.hpp:
 
 /Users/ben/Repositories/VoxelEngine/res/shaders/basic/v_shader.vs.h:
 
