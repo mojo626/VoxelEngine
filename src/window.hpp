@@ -1,99 +1,120 @@
-// #ifndef WINDOW_H
-// #define WINDOW_H
+#ifndef WINDOW_H
+#define WINDOW_H
 
-// #include <SDL3/SDL.h>
-// #include <SDL3/SDL_main.h>
-// #include <SDL3/SDL_render.h>
+#include <iostream>
 
-// #include <iostream>
+#include "common.h"
 
-// #include "color.hpp"
+#include "color.hpp"
 
-// class Window {
-//     public:
-//         Window(int windowWidth2, int windowHeight2)
-//         {
-//             SDL_Init(SDL_INIT_VIDEO);
-//             SDL_CreateWindowAndRenderer("window", windowWidth2, windowHeight2, 0, &window, &renderer);
-//             SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-//             SDL_RenderClear(renderer);
-//             windowWidth = windowWidth2;
-//             windowHeight = windowHeight2;
-//         }
+static bool s_showStats = false;
 
-//         void destroy()
-//         {
-//             SDL_DestroyRenderer(renderer);
-//             SDL_DestroyWindow(window);
-//             SDL_Quit();
-//         }
+void glfw_errorCallback(int error, const char *description)
+{
+    fprintf(stderr, "GLFW error %d: %s\n", error, description);
+}
 
-//         SDL_Renderer* getRenderer() { return renderer; }
+void glfw_keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_F1 && action == GLFW_RELEASE)
+        s_showStats = !s_showStats;
+}
 
-//         SDL_Window* getWindow() { return window; }
+class Window {
+    public:
+        Window(int windowWidth2, int windowHeight2)
+        {
+            windowWidth = windowWidth2;
+            windowHeight = windowHeight2;
 
-//         SDL_Event* getEvent() { return &event; }
+        }
 
-//         void startRendering()
-//         {
-//             SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-//             SDL_RenderClear(renderer);
+        bool init() {
+            glfwSetErrorCallback(glfw_errorCallback);
+            if (!glfwInit())
+                return false;
+            glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+            window = glfwCreateWindow(windowWidth, windowHeight, "helloworld", nullptr, nullptr);
+            if (!window)
+                return false;
 
-            
-//             screenTex = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, windowWidth, windowHeight);
-//             void* pixels;
-//             int pitch;
+            glfwSetKeyCallback(window, glfw_keyCallback);
 
-//             // SDL_RendererInfo rendererInfo;
-//             // SDL_GetRendererInfo(renderer, &rendererInfo);
 
-//             SDL_PixelFormat format = SDL_GetWindowPixelFormat(window);
-//             pixelFormat = SDL_GetPixelFormatDetails(format);
-            
+            // Call bgfx::renderFrame before bgfx::init to signal to bgfx not to create a render thread.
+            // Most graphics APIs must be used on the same thread that created the window.
+            bgfx::renderFrame();
+            // Initialize bgfx using the native window handle and window resolution.
+            bgfx::Init init;
+            #if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
+                init.platformData.ndt = glfwGetX11Display();
+                init.platformData.nwh = (void*)(uintptr_t)glfwGetX11Window(window);
+            #elif BX_PLATFORM_OSX
+                init.platformData.nwh = glfwGetCocoaWindow(window);
+            #elif BX_PLATFORM_WINDOWS
+                init.platformData.nwh = glfwGetWin32Window(window);
+            #endif
 
-//             SDL_LockTexture(screenTex, NULL, &pixels, &pitch);
+            int width, height;
+            glfwGetWindowSize(window, &width, &height);
+            init.resolution.width = (uint32_t)width;
+            init.resolution.height = (uint32_t)height;
+            init.resolution.reset = BGFX_RESET_VSYNC;
+            if (!bgfx::init(init))
+                return false;
 
-//             pixelArray = (Uint32*)pixels;
-//         }
+            kClearView = 0;
+            bgfx::setViewClear(kClearView, BGFX_CLEAR_COLOR);
+            bgfx::setViewRect(kClearView, 0, 0, bgfx::BackbufferRatio::Equal);
 
-//         void drawPoint(int x, int y, Color color)
-//         {   
-//             pixelArray[x + y * windowWidth] = SDL_MapRGBA(pixelFormat, NULL, color.r, color.g, color.b, 255);
-//         }
 
-//         void drawVertLine(int start, int stop, int x, Color color)
-//         {
-//             for (int y = start; y <= stop; y++)
-//             {
-//                 drawPoint(x, y, color);
-//             }
-//         }
+            return true;
+        }
 
-//         void finishRendering()
-//         {
-//             SDL_UnlockTexture(screenTex);
+        void destroy()
+        {
+            bgfx::shutdown();
+	        glfwTerminate();
+        }
+
+        GLFWwindow* getWindow()
+        {
+            return window;
+        }
+
+
+        void startRendering()
+        {
+            glfwPollEvents();
+            // Handle window resize.
+            int oldWidth = windowWidth, oldHeight = windowHeight;
+            int width, height;
+            glfwGetWindowSize(window, &width, &height);
+            if (width != oldWidth || height != oldHeight) {
+                bgfx::reset((uint32_t)width, (uint32_t)height, BGFX_RESET_VSYNC);
+                bgfx::setViewRect(kClearView, 0, 0, bgfx::BackbufferRatio::Equal);
+            }
+
+
+            // This dummy draw call is here to make sure that view 0 is cleared if no other draw calls are submitted to view 0.
+            bgfx::touch(kClearView);
+        }
+
+   
+
+        void finishRendering()
+        {
+            // Advance to next frame. Process submitted rendering primitives.
+		    bgfx::frame();
+        }
     
-//             SDL_RenderTexture(renderer, screenTex, NULL, NULL);
+    private:
+        int windowWidth;
+        int windowHeight;
+        GLFWwindow* window;
+        bgfx::ViewId kClearView;
 
-//             SDL_DestroyTexture(screenTex);
-
-//             SDL_RenderPresent(renderer);
-
-//             pixelArray = NULL;
-//             pixelFormat = NULL;
-//         }
-    
-//     private:
-//         SDL_Renderer* renderer;
-//         SDL_Window* window;
-//         SDL_Event event;
-//         Uint32* pixelArray;
-//         const SDL_PixelFormatDetails* pixelFormat;
-//         SDL_Texture* screenTex;
-//         int windowWidth;
-//         int windowHeight;
-
-// };
+};
 
 
-// #endif
+#endif

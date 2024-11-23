@@ -880,6 +880,7 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
   /Users/ben/Repositories/VoxelEngine/src/color.hpp \
+  /Users/ben/Repositories/VoxelEngine/src/common.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/bx.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/platform.h \
   /Users/ben/Repositories/VoxelEngine/lib/bgfx/bx/include/bx/config.h \
@@ -1443,7 +1444,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSUnicodeDirectAccess.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers/SpeechSynthesis.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc-api.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc-api.h \
+  /Users/ben/Repositories/VoxelEngine/src/window.hpp
 
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/objc/objc.h:
@@ -2599,6 +2601,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/pstl_merge.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/pstl_fill.h:
+
+/Users/ben/Repositories/VoxelEngine/src/common.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/pstl_transform_reduce.h:
 
@@ -4215,6 +4219,8 @@ CMakeFiles/game.dir/src/main.cpp.o: /Users/ben/Repositories/VoxelEngine/src/main
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/DictionaryServices.framework/Headers/DictionaryServices.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/malloc/_malloc.h:
+
+/Users/ben/Repositories/VoxelEngine/src/window.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/sortable.h:
 
