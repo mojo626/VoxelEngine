@@ -73,13 +73,17 @@ int main() {
     camData[0][1] = 0.0;
     camData[0][2] = 0.0;
 
-    camData[1][0] = 1.0;
+    camData[1][0] = 0.0;
     camData[1][1] = 0.0;
-    camData[1][2] = 0.0;
+    camData[1][2] = 1.0;
 
     float sizeData[4];
     sizeData[0] = 128;
     sizeData[1] = 128;
+
+    float camYaw = 0.0f;
+    float camPitch = 0.0f;
+    float walkSpeed = 0.1f;
 
     bgfx::setUniform(sizeUniform, sizeData, 1);
 
@@ -90,20 +94,58 @@ int main() {
 
         if (window.keyboard[GLFW_KEY_A])
         {
-            camData[0][0] -= 0.1;
+            float rightX = cos(camYaw + (3.1415 / 2));
+            float rightZ = sin(camYaw + (3.1415 / 2));
+
+            camData[0][2] += rightZ * walkSpeed;
+            camData[0][0] += rightX * walkSpeed;
         }
         if (window.keyboard[GLFW_KEY_D])
         {
-            camData[0][0] += 0.1;
+            float rightX = cos(camYaw + (3.1415 / 2));
+            float rightZ = sin(camYaw + (3.1415 / 2));
+
+            camData[0][2] -= rightZ * walkSpeed;
+            camData[0][0] -= rightX * walkSpeed;
         }
         if (window.keyboard[GLFW_KEY_W])
         {
-            camData[0][2] += 0.1;
+            float forwardX = cos(camYaw);
+            float forwardZ = sin(camYaw);
+
+            camData[0][2] += forwardZ * walkSpeed;
+            camData[0][0] += forwardX * walkSpeed;
         }
         if (window.keyboard[GLFW_KEY_S])
         {
-            camData[0][2] -= 0.1;
+            float forwardX = cos(camYaw);
+            float forwardZ = sin(camYaw);
+
+            camData[0][2] -= forwardZ * walkSpeed;
+            camData[0][0] -= forwardX * walkSpeed;
         }
+
+        if (window.keyboard[GLFW_KEY_LEFT])
+        {
+            camYaw += 0.1;
+        }
+        if (window.keyboard[GLFW_KEY_RIGHT])
+        {
+            camYaw -= 0.1;
+        }
+
+        if (window.keyboard[GLFW_KEY_UP])
+        {
+            camPitch += 0.1;
+        }
+        if (window.keyboard[GLFW_KEY_DOWN])
+        {
+            camPitch -= 0.1;
+        }
+
+        camData[1][0] = cos(camYaw) * cos(camPitch);
+        camData[1][2] = sin(camYaw) * cos(camPitch);
+        camData[1][1] = sin(camPitch);
         
 
         bgfx::setUniform(camUniform, camData, 2);
