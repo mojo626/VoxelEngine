@@ -38,8 +38,8 @@ void main()
     for (float i = 0; i < maxDis; i += step) {
         vec3 rayPos = camData[0].xyz + (rayDir * i);
 
-        if (imageLoad(inputTexture, rayPos).x == 1.0) {
-            imageStore(outputTexture, coord, vec4(1.0, 1.0, 1.0, 1.0));
+        if (imageLoad(inputTexture, rayPos).w == 1.0) {
+            imageStore(outputTexture, coord, imageLoad(inputTexture, rayPos));
             return;
         }
     }

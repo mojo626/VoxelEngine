@@ -44,7 +44,7 @@ int main() {
 
     Player player;
     
-    Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT);
+    Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT, &player);
 
     if (!window.init())
         return 1;
@@ -86,7 +86,7 @@ int main() {
 
         window.startRendering();
 
-        player.update(&window);
+        player.update(window.keyboard);
         
 
         bgfx::setUniform(camUniform, player.getCamData().camData, 2);

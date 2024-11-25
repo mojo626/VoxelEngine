@@ -26,9 +26,9 @@ class Player {
             camData[1][2] = 1.0;
         }
 
-        void update(Window* window) {
+        void update(std::map<int, bool> keyboard) {
 
-            if (window->keyboard[GLFW_KEY_A])
+            if (keyboard[GLFW_KEY_A])
             {
                 float rightX = cos(camYaw + (3.1415 / 2));
                 float rightZ = sin(camYaw + (3.1415 / 2));
@@ -36,7 +36,7 @@ class Player {
                 camData[0][2] += rightZ * walkSpeed;
                 camData[0][0] += rightX * walkSpeed;
             }
-            if (window->keyboard[GLFW_KEY_D])
+            if (keyboard[GLFW_KEY_D])
             {
                 float rightX = cos(camYaw + (3.1415 / 2));
                 float rightZ = sin(camYaw + (3.1415 / 2));
@@ -44,7 +44,7 @@ class Player {
                 camData[0][2] -= rightZ * walkSpeed;
                 camData[0][0] -= rightX * walkSpeed;
             }
-            if (window->keyboard[GLFW_KEY_W])
+            if (keyboard[GLFW_KEY_W])
             {
                 float forwardX = cos(camYaw);
                 float forwardZ = sin(camYaw);
@@ -52,7 +52,7 @@ class Player {
                 camData[0][2] += forwardZ * walkSpeed;
                 camData[0][0] += forwardX * walkSpeed;
             }
-            if (window->keyboard[GLFW_KEY_S])
+            if (keyboard[GLFW_KEY_S])
             {
                 float forwardX = cos(camYaw);
                 float forwardZ = sin(camYaw);
@@ -61,23 +61,16 @@ class Player {
                 camData[0][0] -= forwardX * walkSpeed;
             }
 
-            if (window->keyboard[GLFW_KEY_LEFT])
+            if (keyboard[GLFW_KEY_SPACE])
             {
-                camYaw += 0.1;
-            }
-            if (window->keyboard[GLFW_KEY_RIGHT])
-            {
-                camYaw -= 0.1;
+                camData[0][1] += walkSpeed;
             }
 
-            if (window->keyboard[GLFW_KEY_UP])
+            if (keyboard[GLFW_KEY_LEFT_SHIFT])
             {
-                camPitch += 0.1;
+                camData[0][1] -= walkSpeed;
             }
-            if (window->keyboard[GLFW_KEY_DOWN])
-            {
-                camPitch -= 0.1;
-            }
+
 
             camData[1][0] = cos(camYaw) * cos(camPitch);
             camData[1][2] = sin(camYaw) * cos(camPitch);
@@ -96,11 +89,27 @@ class Player {
             return data;
         }
 
+        void handleMouseMove(float dx, float dy) {
+            camYaw -= dx * mouseSensitivity;
+            camPitch += dy * mouseSensitivity;
+
+            if (camPitch >= 3.1415/2)
+            {
+                camPitch = 3.1415/2;
+            }
+            if (camPitch <= -3.1415/2)
+            {
+                camPitch = -3.1415/2;
+            }
+        }
+
     private:
         float camData[2][4];
         float walkSpeed = 0.1;
         float camYaw = 0.0f;
         float camPitch = 0.0f;
+        float mouseSensitivity = 0.005f;
+       
 };
 
 

@@ -32,9 +32,13 @@ class ComputeManager {
             std::vector<float> inputTextureData(tex3dSize * tex3dSize * tex3dSize * 4);
             for (uint32_t i = 0; i < inputTextureData.size(); i+=4) {
                 int input = (rand() / (float)RAND_MAX) > 0.5f ? 1.0f : 0.0f;
-                inputTextureData[i] = input;
-                inputTextureData[i+1] = input;
-                inputTextureData[i+2] = input;
+
+                float r = (rand() / (float)RAND_MAX);
+                float g = (rand() / (float)RAND_MAX);
+                float b = (rand() / (float)RAND_MAX);
+                inputTextureData[i] = r;
+                inputTextureData[i+1] = g;
+                inputTextureData[i+2] = b;
                 inputTextureData[i+3] = input;
             }
 
@@ -68,28 +72,6 @@ class ComputeManager {
             );
         }
 
-        // void setPixel(int x, int y)
-        // {
-        //     std::vector<float> textureData(4);
-
-        //     textureData[0] = 1.0f;
-        //     textureData[1] = 1.0f;
-        //     textureData[2] = 1.0f;
-        //     textureData[3] = 1.0f;
-            
-        //     // Update the existing texture with the new data.
-        //     bgfx::updateTexture2D(
-        //         inputTexture,                       // Texture handle
-        //         1,
-        //         0,                                  // Mip level
-        //         x,                                  // X offset
-        //         y,                                  // Y offset
-        //         1,                        // Width
-        //         1,                       // Height
-        //         bgfx::copy(textureData.data(), textureData.size() * sizeof(float))
-        //     );
-            
-        // }
 
         void dispatch() {
 

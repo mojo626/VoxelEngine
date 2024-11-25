@@ -5,6 +5,7 @@
 #include <map>
 
 #include "common.h"
+#include "player.hpp"
 
 
 static bool s_showStats = false;
@@ -15,11 +16,17 @@ class Window {
     public:
         std::map<int, bool> keyboard;
         GLFWwindow* window;
+        Player* player;
+        float lastX = 400, lastY = 300;
 
-        Window(int windowWidth2, int windowHeight2)
+        Window(int windowWidth2, int windowHeight2, Player* player2)
         {
             windowWidth = windowWidth2;
             windowHeight = windowHeight2;
+            player = player2;
+
+            lastX = windowWidth / 2;
+            lastY = windowHeight / 2;
 
         }
 
@@ -33,6 +40,9 @@ class Window {
                 return false;
 
             glfwSetWindowUserPointer(window, this);
+
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+            glfwSetCursorPosCallback(window, mouse_callback);
 
             glfwSetKeyCallback(window, glfw_keyCallback);
 
@@ -124,6 +134,7 @@ class Window {
         int windowWidth;
         int windowHeight;
         bgfx::ViewId kClearView;
+        
 
         static void glfw_errorCallback(int error, const char *description)
         {
@@ -142,6 +153,18 @@ class Window {
                 win->keyboard[key] = true;
             else if (action == GLFW_RELEASE)
                 win->keyboard[key] = false;
+        }
+
+        static void mouse_callback(GLFWwindow *window, double xpos, double ypos) {
+            Window* win = static_cast<Window*>(glfwGetWindowUserPointer(window));
+
+            float xoffset = xpos - win->lastX;
+            float yoffset =
+                win->lastY - ypos; // reversed since y-coordinates range from bottom to top
+            win->lastX = xpos;
+            win->lastY = ypos;
+
+            win->player->handleMouseMove(xoffset, yoffset);
         }
         
 
