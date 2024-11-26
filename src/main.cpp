@@ -40,7 +40,7 @@ static const uint16_t s_quadIndices[] = { 0, 1, 2, 2, 3, 0, };
 
 int main() {
 
-    ComputeManager compute(512, 512, 128);
+    ComputeManager compute(512, 512, 32);
 
     Player player;
     

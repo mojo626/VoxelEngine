@@ -8,6 +8,25 @@
 //article about octrees
 //https://developer.nvidia.com/gpugems/gpugems2/part-v-image-oriented-computing/chapter-37-octree-textures-gpu
 
+/*
+
+
+
+*/
+
+struct Node {
+    bool isEmpty; //are there child nodes?
+    bool hasData; //is there color data (is this is leaf node)
+    Node* A;
+    Node* B;
+    Node* C;
+    Node* D;
+    Node* E;
+    Node* F;
+    Node* G;
+    Node* H;
+};
+
 class ComputeManager {
     public:
         int textureWidth;
@@ -28,19 +47,27 @@ class ComputeManager {
 
         void init()
         {
-            // Create input texture with random data
-            std::vector<float> inputTextureData(tex3dSize * tex3dSize * tex3dSize * 4);
-            for (uint32_t i = 0; i < inputTextureData.size(); i+=4) {
-                int input = (rand() / (float)RAND_MAX) > 0.5f ? 1.0f : 0.0f;
+            std::vector<float> voxelData(tex3dSize * tex3dSize * tex3dSize * 4);
 
-                float r = (rand() / (float)RAND_MAX);
-                float g = (rand() / (float)RAND_MAX);
-                float b = (rand() / (float)RAND_MAX);
-                inputTextureData[i] = r;
-                inputTextureData[i+1] = g;
-                inputTextureData[i+2] = b;
-                inputTextureData[i+3] = input;
+            for (int x = 0; x < tex3dSize; x++) {
+                for (int y = 0; y < tex3dSize; y++) {
+                    for (int z = 0; z < tex3dSize; z++) {
+                        int index = (x + y * tex3dSize + z * tex3dSize * tex3dSize)*4;
+
+                        int input = (rand() / (float)RAND_MAX) > 0.5f ? 1.0f : 0.0f;
+
+                        float r = (rand() / (float)RAND_MAX);
+                        float g = (rand() / (float)RAND_MAX);
+                        float b = (rand() / (float)RAND_MAX);
+                        voxelData[index] = r;
+                        voxelData[index+1] = g;
+                        voxelData[index+2] = b;
+                        voxelData[index+3] = input;
+                    }
+                }   
             }
+
+            std::vector<float> inputTextureData = voxelGridToSVO(voxelData);
 
             std::cout << "3d texture data created" << std::endl;
             
@@ -119,6 +146,70 @@ class ComputeManager {
             );
 
             return returnTex;
+        }
+
+        //data.size / 4 must be a power of 2
+        std::vector<float> voxelGridToSVO(std::vector<float> data) {
+            int maxDepth = log2( //convert size to max depth
+                pow( //get side length
+                    data.size() / 4.0, //divide by 4 since values are rgba
+                    1/3.0)
+                );
+
+            // Create input texture with random data
+            std::vector<float> inputTextureData(tex3dSize * tex3dSize * tex3dSize * 4);
+
+
+            for (int i = 0; i < maxDepth; i++)
+            {
+                for (int x = 0; x < pow(2, i); x++) {
+                    for (int y = 0; y < pow(2, i); y++) {
+                        for (int z = 0; z < pow(2, i); z++) {
+
+                        }
+                    }
+                }
+            }
+
+            for (uint32_t i = 0; i < data.size(); i+=4) {
+                int index = i / 4;
+                int x = index % tex3dSize;
+                int y = (index / tex3dSize) % tex3dSize;
+                int z = index / (tex3dSize * tex3dSize);
+
+                //std::cout << x << ", " << y << ", " << z << std::endl;
+            }
+
+            return data;
+        }
+
+        Node voxelGridToNode(std::vector<float> data) {
+            Node node;
+
+            if (data.size() == 4) {
+                node.isEmpty = true;
+                if (data[3] == 1.0) {
+                    node.hasData = true;
+                } else {
+                    node.hasData = false;
+                }
+                
+                return node;
+            }
+
+            if (data.size() == 32) {
+                
+                node.A = &voxelGridToNode({data.begin(), data.begin() + 4});
+                node.B = &voxelGridToNode(std::vector<float>{data[4]});
+                node.C = &voxelGridToNode(std::vector<float>{data[8]});
+                node.D = &voxelGridToNode(std::vector<float>{data[12]});
+                node.E = &voxelGridToNode(std::vector<float>{data[16]});
+                node.F = &voxelGridToNode(std::vector<float>{data[20]});
+                node.G = &voxelGridToNode(std::vector<float>{data[24]});
+                node.H = &voxelGridToNode(std::vector<float>{data[28]});
+                node.isEmpty = false;
+                node.hasData = false;
+            }
         }
 };
 
