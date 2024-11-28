@@ -60,14 +60,15 @@ class ComputeManager {
                     for (int z = 0; z < tex3dSize; z++) {
                         int index = (x + y * tex3dSize + z * tex3dSize * tex3dSize)*4;
 
-                        int input = (rand() / (float)RAND_MAX) > 0.5f ? 1.0f : 0.0f;
+                        auto perlinVal = db::perlin(x / (float)tex3dSize, y / (float)tex3dSize, z / (float)tex3dSize) / 2.0 + 0.5;
+                        float input = (perlinVal) > 0.4 ? 1.0 : 0.0;
 
                         float r = (rand() / (float)RAND_MAX);
                         float g = (rand() / (float)RAND_MAX);
                         float b = (rand() / (float)RAND_MAX);
-                        voxelData[index] = r;
-                        voxelData[index+1] = g;
-                        voxelData[index+2] = b;
+                        voxelData[index] = 0.0;
+                        voxelData[index+1] = 0.0;
+                        voxelData[index+2] = 1.0;
                         voxelData[index+3] = input;
                     }
                 }   
@@ -194,11 +195,10 @@ class ComputeManager {
         }
 
         bool areVoxelsUniform(const std::vector<float>& data) {
-            std::vector<float> firstColor(&data[0], &data[3]);
-
+            std::vector<float> firstColor(&data[0], &data[4]);
 
             for (int i = 0; i < data.size(); i+=4) {
-                std::vector<float> currentColor(&data[i], &data[i + 3]);
+                std::vector<float> currentColor(&data[i], &data[i + 4]);
 
                 for (int j = 0; j < 4; j++) {
                     if (currentColor[j] != firstColor[j]) {
@@ -206,7 +206,7 @@ class ComputeManager {
                     }
                 }
             }
-
+            
             return true;
         }
 

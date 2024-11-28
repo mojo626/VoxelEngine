@@ -12,3 +12,7 @@
 #define GLFW_EXPOSE_NATIVE_COCOA
 #endif
 #include <GLFW/glfw3native.h>
+
+
+#define DB_PERLIN_IMPL
+#include "db_perlin.hpp"
