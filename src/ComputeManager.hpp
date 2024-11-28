@@ -15,16 +15,22 @@
 */
 
 struct Node {
-    bool isEmpty; //are there child nodes?
-    bool hasData; //is there color data (is this is leaf node)
-    Node* A;
-    Node* B;
-    Node* C;
-    Node* D;
-    Node* E;
-    Node* F;
-    Node* G;
-    Node* H;
+    bool isEmpty = true;          // Whether the node is empty
+    bool isLeaf = false;          // Whether the node is a leaf node
+    float rgba[4] = {0, 0, 0, 0}; // RGBA values (only meaningful for leaf nodes)
+    std::unique_ptr<Node> children[8]; // Pointers to child nodes (nullptr if not present)
+};
+
+struct Texture3D {
+    int size;
+    std::vector<float> data; // RGBA values stored in a flat array
+
+    Texture3D(int size) : size(size), data(size * size * size * 4, 0.0f) {}
+
+    void setVoxel(int x, int y, int z, const float* rgba) {
+        int index = ((z * size + y) * size + x) * 4;
+        std::memcpy(&data[index], rgba, 4 * sizeof(float));
+    }
 };
 
 class ComputeManager {
@@ -67,7 +73,13 @@ class ComputeManager {
                 }   
             }
 
-            std::vector<float> inputTextureData = voxelGridToSVO(voxelData);
+            std::vector<float> inputTextureData = voxelData;
+
+            
+
+            auto node = voxelGridToNode(voxelData);
+
+            //Texture3D tex = convertOctreeToTexture(node.get(), tex3dSize);
 
             std::cout << "3d texture data created" << std::endl;
             
@@ -83,7 +95,7 @@ class ComputeManager {
                 false,
                 bgfx::TextureFormat::RGBA32F,
                 BGFX_TEXTURE_COMPUTE_WRITE | BGFX_SAMPLER_POINT,
-                bgfx::copy(inputTextureData.data(), inputTextureData.size() * sizeof(float))
+                bgfx::copy(voxelData.data(), voxelData.size() * sizeof(float))
             );
 
             
@@ -149,67 +161,113 @@ class ComputeManager {
         }
 
         //data.size / 4 must be a power of 2
-        std::vector<float> voxelGridToSVO(std::vector<float> data) {
-            int maxDepth = log2( //convert size to max depth
-                pow( //get side length
-                    data.size() / 4.0, //divide by 4 since values are rgba
-                    1/3.0)
-                );
+        void encodeNodeToTexture(Node* node, Texture3D& texture, int x, int y, int z, int level, int& nextIndex) {
+            if (!node || node->isEmpty) {
+                float empty[4] = {0, 0, 0, 0};
+                texture.setVoxel(x, y, z, empty);
+                return;
+            }
 
-            // Create input texture with random data
-            std::vector<float> inputTextureData(tex3dSize * tex3dSize * tex3dSize * 4);
+            if (node->isLeaf) {
+                float leaf[4] = {node->rgba[0], node->rgba[1], node->rgba[2], 1.0f};
+                texture.setVoxel(x, y, z, leaf);
+                return;
+            }
+
+            float pointer[4] = {0.5f, 0.5f, 0.5f, 0.5f};
+            texture.setVoxel(x, y, z, pointer);
+
+            int halfSize = 1 << (level - 1);
+            for (int i = 0; i < 8; ++i) {
+                int dx = (i & 1) ? halfSize : 0;
+                int dy = (i & 2) ? halfSize : 0;
+                int dz = (i & 4) ? halfSize : 0;
+                encodeNodeToTexture(node->children[i].get(), texture, x + dx, y + dy, z + dz, level - 1, nextIndex);
+            }
+        }
+
+        Texture3D convertOctreeToTexture(Node* root, int textureSize) {
+            Texture3D texture(textureSize);
+            int nextIndex = 0;
+            encodeNodeToTexture(root, texture, 0, 0, 0, log2(textureSize), nextIndex);
+            return texture;
+        }
+
+        bool areVoxelsUniform(const std::vector<float>& data) {
+            std::vector<float> firstColor(&data[0], &data[3]);
 
 
-            for (int i = 0; i < maxDepth; i++)
-            {
-                for (int x = 0; x < pow(2, i); x++) {
-                    for (int y = 0; y < pow(2, i); y++) {
-                        for (int z = 0; z < pow(2, i); z++) {
+            for (int i = 0; i < data.size(); i+=4) {
+                std::vector<float> currentColor(&data[i], &data[i + 3]);
 
-                        }
+                for (int j = 0; j < 4; j++) {
+                    if (currentColor[j] != firstColor[j]) {
+                        return false;
                     }
                 }
             }
 
-            for (uint32_t i = 0; i < data.size(); i+=4) {
-                int index = i / 4;
-                int x = index % tex3dSize;
-                int y = (index / tex3dSize) % tex3dSize;
-                int z = index / (tex3dSize * tex3dSize);
-
-                //std::cout << x << ", " << y << ", " << z << std::endl;
-            }
-
-            return data;
+            return true;
         }
 
-        Node voxelGridToNode(std::vector<float> data) {
-            Node node;
+        // Recursive function to convert a 3D grid into a voxel octree
+        std::unique_ptr<Node> voxelGridToNode(const std::vector<float>& data) {
+            int gridSize = pow(data.size() / 4, 1/3.0);
 
-            if (data.size() == 4) {
-                node.isEmpty = true;
-                if (data[3] == 1.0) {
-                    node.hasData = true;
-                } else {
-                    node.hasData = false;
+            auto node = std::make_unique<Node>();
+            float color[4] = {0};
+
+            //check if everything is the same within this area
+            //(either everything is the same color or node is empty, this means this is a leaf node)
+            //should also return if current node size is only one voxel
+            if (areVoxelsUniform(data)) {
+                node->isLeaf = true;
+                node->isEmpty = data[3] == 0.0;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    node->rgba[i] = data[i];
                 }
-                
                 return node;
             }
 
-            if (data.size() == 32) {
-                
-                node.A = &voxelGridToNode({data.begin(), data.begin() + 4});
-                node.B = &voxelGridToNode(std::vector<float>{data[4]});
-                node.C = &voxelGridToNode(std::vector<float>{data[8]});
-                node.D = &voxelGridToNode(std::vector<float>{data[12]});
-                node.E = &voxelGridToNode(std::vector<float>{data[16]});
-                node.F = &voxelGridToNode(std::vector<float>{data[20]});
-                node.G = &voxelGridToNode(std::vector<float>{data[24]});
-                node.H = &voxelGridToNode(std::vector<float>{data[28]});
-                node.isEmpty = false;
-                node.hasData = false;
+            int halfSize = gridSize / 2;
+
+
+            for (int i = 0; i < 8; i++) {
+                //use bitwise operations to get offsets from index
+                int offsetX = (i & 1) ? halfSize : 0;
+                int offsetY = (i & 2) ? halfSize : 0;
+                int offsetZ = (i & 4) ? halfSize : 0;
+
+                //generate new data that is just the new node
+                std::vector<float> newData(halfSize * halfSize * halfSize * 4);
+                for (int x = 0; x < halfSize; x++)
+                {
+                    for (int y = 0; y < halfSize; y++)
+                    {
+                        for (int z = 0; z < halfSize; z++)
+                        {
+                            int index = (z * halfSize * halfSize + y * halfSize + x) * 4;
+
+                            int index2 = ((z + offsetZ) * gridSize * gridSize + (y + offsetY) * gridSize + x + offsetX) * 4;
+
+                            newData[index] = data[index2];
+                            newData[index + 1] = data[index2 + 1];
+                            newData[index + 2] = data[index2 + 2];
+                            newData[index + 3] = data[index2 + 3];
+                        }
+                    }
+                }
+
+                //recursively get children nodes
+                node->children[i] = voxelGridToNode(newData);
+                node->isEmpty = false;
+                node->isLeaf = false;
             }
+
+            
+            return node;
         }
 };
 

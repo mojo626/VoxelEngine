@@ -14,6 +14,23 @@ uniform vec4 outputSize;
 
 #define nearClip 1.0
 
+// float4 tree_lookup(vec3 point) // Lookup coordinates
+// {
+    
+//     for (float i = 0; i < 100; i++)
+//     { // fixed # of iterations
+//         vec3 P;
+//         // compute lookup coords. within current node
+//         P = (MND + floor(0.5 + I.xyz * 255.0)) * invS;
+//         // access indirection pool
+//         if (I.w < 0.9) // already in a leaf?
+//             I = (float4)tex3D(IndirPool, P); // no, continue to next depth
+//         // compute pos within next depth grid
+//         MND = MND * N;
+//     }
+//     return (I);
+// }
+
 
 void main()
 {
