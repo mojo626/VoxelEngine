@@ -24,6 +24,7 @@ struct Node {
 struct Texture3D {
     int size;
     std::vector<float> data; // RGBA values stored in a flat array
+    int index = 0;
 
     Texture3D(int size) : size(size), data(size * size * size * 4, 0.0f) {}
 
@@ -80,7 +81,7 @@ class ComputeManager {
 
             auto node = voxelGridToNode(voxelData);
 
-            //Texture3D tex = convertOctreeToTexture(node.get(), tex3dSize);
+            Texture3D tex = convertOctreeToTexture(node.get(), tex3dSize);
 
             std::cout << "3d texture data created" << std::endl;
             
@@ -96,7 +97,7 @@ class ComputeManager {
                 false,
                 bgfx::TextureFormat::RGBA32F,
                 BGFX_TEXTURE_COMPUTE_WRITE | BGFX_SAMPLER_POINT,
-                bgfx::copy(voxelData.data(), voxelData.size() * sizeof(float))
+                bgfx::copy(tex.data.data(), tex.data.size() * sizeof(float))
             );
 
             
@@ -162,35 +163,47 @@ class ComputeManager {
         }
 
         //data.size / 4 must be a power of 2
-        void encodeNodeToTexture(Node* node, Texture3D& texture, int x, int y, int z, int level, int& nextIndex) {
-            if (!node || node->isEmpty) {
-                float empty[4] = {0, 0, 0, 0};
-                texture.setVoxel(x, y, z, empty);
-                return;
+        void encodeNodeToTexture(Node* node, Texture3D* texture) {
+            
+            int index = texture->index;
+
+            int texSize = texture->size;
+            
+            int x = (index % texSize) * 2;
+            int y = ((index / texSize) % texSize) * 2;
+            int z = (index / (texSize * texSize)) * 2;
+
+            texture->index ++;
+
+            for (int i = 0; i < 8; i++)
+            {
+                int offsetX = (i & 1) ? 1 : 0;
+                int offsetY = (i & 2) ? 1 : 0;
+                int offsetZ = (i & 4) ? 1 : 0;
+
+                if (node->children[i]->isEmpty) {
+                    float rgba[4] = {0.0, 0.0, 0.0, 0.0};
+                    texture->setVoxel(x + offsetX, y + offsetY, z + offsetZ, rgba);
+                } else if (node->children[i]->isLeaf) {
+                    float rgba[4] = {node->children[i]->rgba[0], node->children[i]->rgba[1], node->children[i]->rgba[2], 1.0};
+                    texture->setVoxel(x + offsetX, y + offsetY, z + offsetZ, rgba);
+                } else {
+                    int newX = ((index + 1) % texSize);
+                    int newY = (((index + 1) / texSize) % texSize);
+                    int newZ = ((index + 1) / (texSize * texSize));
+
+                    float rgba[4] = {newX / (float)texSize, newY / (float)texSize, newZ / (float)texSize, 0.5};
+                    texture->setVoxel(x + offsetX, y + offsetY, z + offsetZ, rgba);
+
+                    encodeNodeToTexture(node->children[i].get(), texture);
+                }
             }
 
-            if (node->isLeaf) {
-                float leaf[4] = {node->rgba[0], node->rgba[1], node->rgba[2], 1.0f};
-                texture.setVoxel(x, y, z, leaf);
-                return;
-            }
-
-            float pointer[4] = {0.5f, 0.5f, 0.5f, 0.5f};
-            texture.setVoxel(x, y, z, pointer);
-
-            int halfSize = 1 << (level - 1);
-            for (int i = 0; i < 8; ++i) {
-                int dx = (i & 1) ? halfSize : 0;
-                int dy = (i & 2) ? halfSize : 0;
-                int dz = (i & 4) ? halfSize : 0;
-                encodeNodeToTexture(node->children[i].get(), texture, x + dx, y + dy, z + dz, level - 1, nextIndex);
-            }
         }
 
         Texture3D convertOctreeToTexture(Node* root, int textureSize) {
             Texture3D texture(textureSize);
-            int nextIndex = 0;
-            encodeNodeToTexture(root, texture, 0, 0, 0, log2(textureSize), nextIndex);
+            encodeNodeToTexture(root, &texture);
             return texture;
         }
 
